@@ -1,0 +1,93 @@
+{% extends 'registration/registration_base.html' %}
+{% load static %}
+{% load i18n %}
+{% load mytags %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<!-- Start Banner Area -->
+	<section class="banner-area organic-breadcrumb">
+		<div class="container">
+			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+				<div class="col-first">
+					<h1 style="font-family:'Sparta', sans-serif">{% trans 'Registration Page' %}</h1>
+					<nav class="d-flex align-items-center">
+						<a href="/" style="font-family:'Sparta', sans-serif">{% trans 'Home' %}<span class="lnr lnr-arrow-right"></span></a>
+						<a href="" style="font-family:'Sparta', sans-serif">{% trans 'Registration Page' %}</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+	<!--================Login Box Area =================-->
+	<section class="login_box_area section_gap" style="padding:10px">
+		<div class="container">
+			<h1 class="text-center mb-0 p-2" style="font-family:'Sparta', sans-serif">{% trans 'Registration' %}</h1>
+			<div class="row">
+
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<img class="img-fluid" src="{% static 'img/login.png' %}" alt="">
+						<div class="hover">
+<!--							<h4>New to our website?</h4>-->
+<!--							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>-->
+<!--							<a class="primary-btn" href="registration.html">Create an Account</a>-->
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner">
+						<h3>{% trans 'Register'%}</h3>
+						<form class="row login_form" method="post" >
+							{% csrf_token %}
+							{% for field in form %}
+								{% for error in field.errors %}
+									<p class="error text-center" style="font-size:'Sparta', sans-serif">{{ error }}</p>
+								{% endfor %}
+							{% endfor %}
+							{% for error in form.non_field_errors %}
+								<p class="error text-center" style="font-size:'Sparta', sans-serif">{{ error }}</p>
+							{% endfor %}
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" style="font-size:2rem" name="username" placeholder="Username" required value="{{ next }}">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" style="font-size:2rem" name="email" placeholder="E-mail" required>
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" style="font-size:2rem" name="password1" placeholder="Password" required>
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" style="font-size:2rem" name="password2" placeholder="Confirm password" required>
+							</div>
+							<div class="col-md-12 form-group">
+								<div class="creat_account">
+									<input type="checkbox" id="f-option2" name="selector">
+									<label for="f-option2" style="font-weight:500">{% trans 'Keep me logged in' %}</label>
+								</div>
+							</div>
+							<div class="col-md-12 form-group">
+								<a href="{% url 'auth_login' %}"><button type="submit" value="submit" class="primary-btn">{% trans 'Sign In' %}</button></a>
+								<a href="{% url 'auth_login' %}">Login</a>
+							</div>
+						</form>
+						{% for message in messages %}
+								<p id="messages text-center" style="font-size:'Sparta', sans-serif">{{message}}</p>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+{% endblock %}
+
+{% block extra_js %}
+	<script>
+		{% for i in messages %}
+			console.log('{{ i }}')
+		{% endfor %}
+	</script>
+{% endblock %}

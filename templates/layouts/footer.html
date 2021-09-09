@@ -1,0 +1,368 @@
+{% load static %}
+{% load i18n %}
+{% load static %}
+{% load i18n %}
+<style>
+
+.footerStart {
+    background-image: url({% static './img/footer.png' %});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.footerFirst {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    max-width: 330px;
+    width: 100%;
+}
+
+.footerSecond {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footerName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: #EB5757;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footerLink {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footerLinks {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.footerDesc {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    max-width: 330px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.footerInput {
+    background-color: #fff;
+    max-width: 310px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7px;
+    border-radius: 9px;
+}
+
+.evelopeicon {
+    color: #323232;
+}
+
+.footerInclass {
+    background: inherit;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.footerButton {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+    background-color: #EB5757;
+    border: none;
+    border-radius: 9px;
+    padding: 7px;
+}
+
+.footerFullIcons {
+    display: flex;
+    align-items: center;
+    max-width: 180px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.emailicon {
+    font-size: 26px;
+    color: #fff;
+}
+
+.emailicon:hover {
+    cursor: pointer;
+}
+
+.footerLogo {
+    max-width: 100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footerImg {
+    width: 80px;
+}
+
+.footerRow {
+    margin-top: 20px;
+}
+
+.hr3 {
+    color: #f3f3f3;
+}
+
+.footerNav {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.footerNav ul li .footerHelp {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding-bottom: 6px;
+    transition: all.2s;
+}
+
+.footerNav ul li .footerHelp:hover {
+    border-bottom: 1px solid#fff;
+}
+
+.fotEndDesc {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.mainicon {
+    display: flex;
+}
+
+.navbarHook {
+    display: flex;
+    align-items: center;
+    padding: 10px 70px;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    /* box-shadow: 8px 8px 3px #aaaaaa; */
+}
+
+@media (max-width:600px) {}
+
+@media (max-width:400px) {
+    .navbarHook {
+        padding: 10px !important;
+    }
+    .btnpro {
+        font-size: 12px !important;
+    }
+    .bar-img {
+        width: 50px !important;
+        background-color: #f1f1f1;
+    }
+    .logoNav {
+        width: 40px;
+    }
+    .navbarstop ul li a {
+        margin-right: 0;
+        padding: 20px;
+    }
+    .nav-li {
+        padding: 20px 0 !important;
+        font-size: 22px !important;
+    }
+    .nav-li:hover {
+        border-bottom: 1px solid#222;
+    }
+    .navbarNav {
+        padding-top: 50px !important;
+    }
+    .nav-ul {
+        top: 122px !important;
+    }
+    .bar-img {
+        width: 25px !important;
+    }
+    .navbarFullIcons {
+        padding-right: 10px !important;
+    }
+    .oldicon {
+        font-size: 14px !important;
+    }
+    .btnunprops {
+        font-size: 15px !important;
+    }
+    .footerName {
+        text-align: center;
+        font-size: 18px !important;
+    }
+    .footerText {
+        text-align: center;
+        font-size: 14px !important;
+    }
+    .footerLink {
+        margin-bottom: 10px !important;
+        font-size: 16px !important;
+    }
+    .footerDesc {
+        text-align: center;
+        font-size: 16px !important;
+    }
+    .footerButton {
+        font-size: 16px !important;
+    }
+    .footerFullIcons {
+        margin: 0 auto;
+    }
+    .footerButton {
+        font-size: 15px !important;
+    }
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .footerNav ul li {
+        padding: 5px 0;
+    }
+    .fotEndDesc {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width:270px) {
+    .btnpro {
+        font-size: 11px !important;
+    }
+    .nav-ul {
+        top: 140px !important;
+    }
+}
+</style>
+<div class="footerStart">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footerFirst">
+                        <h3 class="footerName">{% trans 'About Agro Organic cop.' %}</h3>
+                        <p class="footerText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus venenatis ultrices mauris accumsan habitasse ut ante. Quam quam malesuada leo vitae blandit.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footerSecond">
+                        <h3 class="footerName">{% trans 'Location Store' %}</h3>
+                        <a href="#" class="footerLink"><i class="fas fa-map-marker-alt footerLinks"></i> Your
+                            location</a>
+                        <a href="#" class="footerLink"><i class="fas fa-phone-alt footerLinks"></i>+998 90 123 45
+                            67</a>
+                        <a href="#" class="footerLink"><i
+                                class="fas fa-envelope footerLinks"></i>loremipsum@mail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footerThree">
+                        <h3 class="footerName">{% trans 'Subscribe To Our Newsletter' %}</h3>
+                        <p class="footerDesc">Stay review for updates</p>
+                        <form action="#" class="footerForm">
+                            <div class="footerInput">
+                                <a><i class="fas fa-envelope evelopeicon"></i></a>
+                                <input style="font-size:14px" type="email" placeholder="{% trans 'Enter your order name' %}" class="footerInclass">
+                                <div class="footerMain">
+                                    <button class="footerButton">{% trans 'SUBMIT' %}</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row footerRow">
+                <div class="col-md-4">
+                    <div class="footerCard">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footerLogo">
+                        <a href="/"><img src="{% static './img/icon.png' %}" alt="granade" class="footerImg"></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footerCards">
+                        <h3 class="footerName">{% trans 'Connect with us' %}</h3>
+                        <div class="footerFullIcons">
+                            <a class="fecebook "><i class="fab fa-facebook  emailicon"></i></a>
+                            <a class="instagram "><i class="fab fa-instagram emailicon"></i></a>
+                            <a class="twitter" e><i class="fab fa-twitter emailicon"></i></a>
+                            <a class="whatsapp "><i class="fab fa-whatsapp emailicon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="footerNavbar">
+                        <nav class="footerNav">
+                            <ul>
+                                <li><a href="{% url 'contact:home' %}" class="footerHelp" style="font-family:'Spartan', sans-serif;font-weight:500">{% trans 'Home' %}</a></li>
+                                <li><a href="{% url 'products:lists' %}" class="footerHelp" style="font-family:'Spartan', sans-serif;font-weight:500">{% trans 'Products' %}</a></li>
+                                <li><a href="{% url 'contact:blog' %}" class="footerHelp" style="font-family:'Spartan', sans-serif;font-weight:500">{% trans 'About Us' %}</a></li>
+                                <li><a href="{% url 'contact:contact' %}" class="footerHelp" style="font-family:'Spartan', sans-serif;font-weight:500">{% trans 'Contacts' %}</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="fotEnd">
+                        <p class="fotEndDesc" style="font-family:'Spartan', sans-serif;font-weight:500">Agro Organic 2021. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

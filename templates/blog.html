@@ -1,0 +1,113 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Start Banner Area -->
+
+
+    <!-- End Banner Area -->
+    <section class="slide-wrapper" style="width:100%;height:100vh">
+            <div id="myCarousel" class="carousel slide"  style="width:100%;height:100vh">
+                <!-- Indicators -->
+                <ol class="carousel-indicators m-auto">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                 </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" style="background: url({% static 'img/banner/about_page.png' %}) center no-repeat;">
+                    <div class="item item1 active">
+                        <div class="fill" style=" width:100%;height:100vh">
+                            <div class="inner-content">
+                                <div class="container">
+                                    <div class="carousel-img">
+                                    <img src="{% static 'img/banner/about2.png' %}" style="text-align:center;max-width:500px;width:100%;margin:auto" alt="sofa" class="img img-responsive" style="width:400px" />
+                                </div>
+                                <div class="carousel-desc">
+
+                                    <h2 style="color:#fff;font-family:'Spartan', sans-serif;text-align:center;padding:10px"><br>Our Company</h2>
+                                    <p style="color:#fff;font-size:17px;font-family:'Spartan', sans-serif;padding:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
+
+                                </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item2">
+                        <div class="fill" style="width:100%;height:100vh">
+                            <div class="inner-content">
+                                <div class="container">
+                                    <div class="carousel-img">
+                                    <img src="{% static 'img/banner/ferma.png' %}" style="text-align:center;max-width:500px;width:100%;margin:auto;padding:5px" alt="white-sofa" style="width:28%" class="img img-responsive" />
+                                </div>
+                                <div class="carousel-desc">
+
+                                    <h2 style="color:#fff;font-family:'Spartan', sans-serif;text-align:center;padding:10px"><br>Why Choose Us</h2>
+                                    <p style="color:#fff;font-size:17px;font-family:'Spartan', sans-serif;padding:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
+
+                                </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item3">
+                        <div class="fill" style="width:100%;height:100vh;">
+                            <div class="inner-content">
+                                <div class="container" style="padding-top:10%">
+                                    <div class="col-md-3">
+                                    <div class="carousel-img">
+                                        <img src="{% static 'img/banner/logo11.png' %}" alt="sofa" class="img img-responsive" style="width:200px" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-9 text-left">
+                                    <div class="carousel-desc">
+
+                                        <h2 style="color:#fff;font-family:'Spartan', sans-serif">Our Services</h2>
+                                        <p style="color:#fff;font-size:17px;font-family:'Spartan', sans-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
+
+                                    </div>
+                                </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    <!-- Swiper -->
+
+
+    <!--================Blog Categorie Area =================-->
+<!--    <section class="blog_categorie_area">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                {% for post in object_list %}-->
+<!--                 <div class="col-lg-4">-->
+<!--                    <div class="categories_post">-->
+<!--                        <a href="{% url 'blog:single' pk=post.pk %}">-->
+<!--                        <img src="{{ post.image.url }}" alt="post">-->
+<!--                        <div class="categories_details">-->
+<!--                            <div class="categories_text">-->
+<!--                                    <h5>{{ post.title }}</h5>-->
+<!--                                <div class="border_line"></div>-->
+<!--                                <p>Enjoy your social life together</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                 </div>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+    <!--================Blog Categorie Area =================-->
+
+{% endblock %}

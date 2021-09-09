@@ -1,0 +1,655 @@
+{% load static %}
+{% load i18n %}
+{% load mytags %}
+{% block new_css %}
+<style>
+    @media(max-width:990px) {
+    .navbarNav {
+        display: flex !important;
+        flex-direction: column !important;
+        right: -100% !important;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        /* background-color: #2f3640; */
+        /* top: 80px; */
+        transition: all.5s;
+        text-align: center;
+    }
+    .navbarNav.show {
+        left: 0;
+        z-index:100;
+    }
+    #icon {
+        display: block;
+    }
+    .bar-img {
+        display: block !important;
+        opacity: 999;
+    }
+    .navbarstop ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    position:fixed;z-index:99;width:100%"
+}
+
+section {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+}
+
+.nav-ul {
+    float: right;
+}
+
+.nav-li {
+    display: inline-block;
+    /* margin: 0 8px; */
+    line-height: 80px;
+    text-decoration: none;
+}
+
+a {
+    color: #fff;
+    font-size: 18px;
+    /* text-transform: uppercase; */
+    border: 1px solid transparent;
+    /* padding: 7px 10px; */
+    border-radius: 3px;
+}
+
+
+/* a#active,
+a:hover {
+
+} */
+
+.bar-img {
+    max-width: 50px;
+    width: 100%;
+    margin: 10px 0;
+    display: none;
+}
+
+#icon {
+    float: right;
+    /* margin-right: 40px; */
+    cursor: pointer;
+}
+
+@media(max-width:990px) {
+    #icon {
+        display: block;
+    }
+    .navbarHook {
+        padding: 10px 40px !important;
+    }
+    .btnpro span {
+        display: none;
+    }
+    .navbarFirst {
+        background-color: #2f3640 !important;
+    }
+    .bar-img {
+        display: block;
+        width: 30px !important;
+    }
+    .navbarFullIcons {
+        padding-right: 15px !important;
+    }
+    .nav-ul {
+        position: absolute;
+        width: 100%;
+        /* height: 100vh; */
+        background-color: #f1f1f1;
+        top: 135px;
+        left: -100%;
+        transition: all.5s;
+        text-align: center;
+    }
+    .nav-li {
+        display: block;
+        /* margin: 50px 0; */
+        line-height: 30px;
+        color: #fff;
+        padding: 20px !important;
+    }
+    a#active,
+    a:hover {
+        border: none;
+        /* color: #3498db; */
+    }
+    .nav-ul.show {
+        left: 0;
+        z-index:99;
+    }
+    .navDropdown {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+    .footerName {
+        text-align: center;
+        /* font-size: 18px !important; */
+    }
+    .footerText {
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        /* font-size: 14px !important; */
+    }
+    .footerLink {
+        margin-bottom: 10px !important;
+        /* font-size: 16px !important; */
+    }
+    .footerDesc {
+        text-align: center;
+        /* font-size: 16px !important; */
+    }
+    .footerButton {
+        /* font-size: 16px !important; */
+    }
+    .footerFullIcons {
+        margin: 0 auto;
+    }
+    .footerButton {
+        /* font-size: 15px !important; */
+    }
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .footerNav ul li {
+        padding: 5px 0;
+    }
+    .footerInput {
+        margin: 0 auto;
+    }
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+p {
+    color: #000;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family:'Spartan', sans-serif
+}
+
+a,
+button:hover {
+    cursor: pointer;
+}
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar-img {
+    max-width: 50px;
+    width: 100%;
+    margin: 10px 0;
+    display: none;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color:#222
+}
+
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color:blue
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+
+
+/* navbar css */
+
+.navbarFirst {
+    background: #013766 !important;
+    padding: 15px 0;
+
+}
+
+.navbarStart {
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+.navDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.navbarLogo {
+    display: flex;
+    align-items: center;
+}
+
+.navbarNav {
+    display: flex;
+    /* display: none; */
+    align-items: center;
+}
+
+.logoName {
+    display: none;
+    /* margin-bottom: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  color: #013766;
+  padding-left: 10px;
+  width: 100%; */
+}
+
+.btnpro {
+    color: #fff !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.btnpro span {
+    color: #fff !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.btnunpro {
+    color: #000 !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 21px;
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.btnunprops {
+    color: #000 !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 21px;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.dropbtn {
+    background: inherit;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.dropbtn:hover {
+    background: inherit !important;
+}
+
+.linknav {
+    list-style-type: none;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbarstop ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarstop ul li a {
+    margin-right: 20px;
+}
+
+.navrow {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.navbar_input{
+    outline:none;
+    border:none;
+    border-radius:10px;
+    max-width:180px;
+    width:100%;
+    margin-left:-10px;
+    background:inherit;
+}
+
+.nav_input {
+    background:#fff;
+    border-radius:10px;
+<!--    max-width:150px;-->
+<!--    width:100%;-->
+
+}
+
+@media (max-width:600px) {
+    .navbar_input {
+        max-width:110px !important;
+        width:100%;
+    }
+    .navbarHook {
+    padding: 10px 20px !important;
+    }
+}
+@media (max-width:330px) {
+    .navbar_input {
+        max-width:80px !important;
+        width:100%;
+    }
+    .navbarHook {
+    padding: 10px 10px !important;
+    }
+}
+
+@media (max-width:400px) {
+.btnunprops3{
+font-size:15px !important;
+}
+   .navbar_input{
+        max-width:110px;
+        width:100%;
+        font-size:14px;
+    }
+    .navbarHook {
+        padding: 10px !important;
+    }
+    .btnpro {
+        font-size: 12px !important;
+    }
+    .bar-img {
+        width: 50px !important;
+        background-color: #f1f1f1;
+    }
+    .logoNav {
+        width: 40px;
+    }
+    .navbarstop ul li a {
+        margin-right: 0;
+        padding: 20px;
+    }
+    .nav-li {
+        padding: 20px 0 !important;
+        font-size: 22px !important;
+    }
+    .nav-li:hover {
+        border-bottom: 1px solid#222;
+    }
+    .navbarNav {
+        padding-top: 50px !important;
+    }
+    .nav-ul {
+        top: 122px !important;
+    }
+    .bar-img {
+        width: 25px !important;
+    }
+    .navbarFullIcons {
+        padding-right: 10px !important;
+    }
+    .oldicon {
+        font-size: 14px !important;
+    }
+    .btnunprops {
+        font-size: 15px !important;
+        padding:5px !important
+    }
+    .footerStart {
+        position: relative;
+        position: relative;
+        top: 20px;
+    }
+    .footerName {
+        text-align: center;
+        font-size: 18px !important;
+    }
+    .footerText {
+        text-align: center;
+        font-size: 14px !important;
+    }
+    .footerLink {
+        margin-bottom: 10px !important;
+        font-size: 16px !important;
+    }
+    .footerDesc {
+        text-align: center;
+        font-size: 16px !important;
+    }
+    .footerButton {
+        font-size: 16px !important;
+    }
+    .footerFullIcons {
+        margin: 0 auto;
+    }
+    .footerButton {
+        font-size: 15px !important;
+    }
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .footerNav ul li {
+        padding: 5px 0;
+    }
+    .fotEndDesc {
+        font-size: 15px !important;
+    }
+}
+
+
+
+.navbarFullIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+</style>
+{% endblock %}
+<div class="mynavbar" style="position:fixed;z-index:99;width:100%">
+    <div class="navbarStart" >
+        <div class="navbarFirst" >
+            <div class="container nav-cont"  style="max-width: 1510px;">
+                    <div class="navDropdown" style="display:flex,align-items:center">
+                        <div class="navDropStart">
+                            <div class="dropdown">
+                                {% get_current_language as lang %}
+                                {% get_available_languages as langs %}
+                                <button class="dropbtn btnpro" style="font-size:18px;text-transform: uppercase"><img src="/static/img/{{ lang }}.png" style="width:30%;padding:2px" alt=""> <a>{{ lang }}<i class="fas fa-angle-down btnpro"></i></a></button>
+                                <div class="dropdown-content">
+                                    {% for l in langs %}
+                                    {% if l.0 != lang %}
+                                    <a href="{% get_url_lang request l.0 %}" style="font-size:18px;text-transform: uppercase">
+                                        <img src="/static/img/{{ l.0 }}.png" style="width:17%" alt=""> {{ l.0 }}</a>
+                                     {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+<!--                            <div class="dropdown">-->
+<!--                                <button class="dropbtn btnpro">USD <a><i-->
+<!--                                            class="fas fa-angle-down btnpro"></i></a></button>-->
+<!--                                <div class="dropdown-content">-->
+<!--                                    <a href="#">USD</a>-->
+<!--                                    <a href="#">EUR</a>-->
+<!--                                    <a href="#">RUB</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                        <div class="footerDropIcons" style="display:flex;align-items:center">
+                            <a href="{% url 'products:cart' %}" class=" btnpro">
+                                <i class="far fa-check-circle btnpro oldicon"></i><span>{% trans 'Checkout' %}</span>
+                            </a>
+                              <a href="{% url 'orders:history' %}" class="btnpro"> <i class="fas fa-user btnpro oldicon "></i><span>{% trans 'My account' %}</span></a>
+                                  {% if request.user.is_authenticated %}
+                                        <a href="{% url 'auth_logout' %}" class="btnpro"><i class="fas fa-sign-in-alt btnpro oldicon" style="display:flex"><p style="font-family:'Spartan', sans-serif;color:#fff;padding:0px 5px;font-size:17px">{% trans 'Log out' %}</p></i>
+                                  {% else %}
+                                            <a href="{% url 'auth_login' %}" class="btnpro" ><i class="fas fa-sign-in-alt btnpro oldicon"  style="font-size:18px;display:flex"><p style="font-family:'Spartan', sans-serif;color:#fff;padding:0px 5px;font-size:17px">{% trans 'Sign in' %}</p></i>
+                                  {% endif %}
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbarHook" >
+        <div class="navbarLogo">
+            <a href="{% url 'contact:home' %}"> <img title="" src="{% static 'img/icon.png' %}" alt="Agro" class="logoNav"></a>
+            <!-- <p class="logoName">Agro Organic</p> -->
+        </div>
+        <nav class="navbarNav nav-ul">
+            <div class="dropdown">
+                <a class="dropbtn nav-li {% if request.path == '/'|add:lang|add:'/' %} active {% endif %}" href="{% url 'contact:home' %}" style="font-size:16px">{% trans 'HOME' %}<!--<span><i class="fas fa-angle-down btnunpro"></i></span>--></a>
+                <!-- <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div> -->
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn nav-li {% url 'products:lists' %}" href="{% url 'products:lists' %}" style="font-size:16px">{% trans 'PRODUCTS' %} <!--<span><i class="fas fa-angle-down btnunpro"></i></span>--></a>
+                <!-- <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div> -->
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn nav-li" style="text-transform: uppercase;font-size:16px" href="{% url 'contact:blog' %}">{% trans 'About Us' %}<!--<span><i class="fas fa-angle-down btnunpro"></i></span>--></a>
+                <!-- <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div> -->
+            </div>
+            <div class="dropdown">
+                <a class="dropbtn nav-li" href="{% url 'contact:contact' %}" style="font-size:16px">{% trans 'CONTACT' %}<!--<span><i class="fas fa-angle-down btnunpro"></i></span>--></a>
+                <!-- <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div> -->
+            </div>
+        </nav>
+        <div class="mainicon">
+
+            <div class="navbarFullIcons">
+                <form action="{% url 'products:lists' %}">
+                    <a href="#" class="nav_input"> <input type="text" style="color:#000" class="navbar_input" name="q" value="{{ request.GET.q }}">
+                        <button class="btn" type="submit" style="background:none;position: absolute;
+    margin-left: -30px;
+    font-size: 14px;
+    background: none;"><i class="fas fa-search btnunprops3" style="background:none;color:gray"></i> </button>
+                    </a>
+                </form>
+
+                <a href="{% url 'products:wishlist' %}"><img src="{% static '/img/icons/like.png' %}" style="width:26px;padding:2px" alt=""><sup id="wishlist_length" style="color:#fff;background-color:#EB5757;padding:2px 6px;border-radius:50%;font-family:sans-serif">{% get_wishlist_count request %}</sup></a>
+                <a href="{% url 'products:cart' %}"><img src="{% static '/img/icons/cart.png' %}" style="width:28px;padding:2px" alt=""><sup style="color:#fff;background-color:#EB5757;padding:2px 6px;border-radius:50%;font-family:sans-serif" id="cart_length">{% get_cart_count request %}</sup></a>
+            </div>
+            <div id="icon">
+                <i> <img src="{% static 'img/bars-solid.svg' %}" alt="bars" class="bar-img" id="#"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+</script>

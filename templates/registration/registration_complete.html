@@ -1,0 +1,54 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Активация отправлена на вашу почту)" %}{% endblock %}
+
+{% block content %}
+
+
+	<section class="login_box_area section_gap">
+		<div class="container">
+            <br>
+            <br>
+
+			<h3 class="text-center">Register</h3>
+			<div class="row">
+
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<img class="img-fluid" src="{% static 'img/login.png' %}" alt="">
+						<div class="hover">
+<!--							<h4>New to our website?</h4>-->
+<!--							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>-->
+<!--							<a class="primary-btn" href="registration.html">Create an Account</a>-->
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner">
+						<h3>{% trans 'Register'%}</h3>
+						<form class="row login_form" method="post" >
+							{% csrf_token %}
+                              <p style="font-zie:30px">{% trans "Ссылка на подтверждения отправлено на ваш email" %}</p>
+							<div class="col-md-12 form-group">
+								<a href="{% url 'auth_login' %}"><button type="button" value="submit" class="primary-btn">{% trans 'Sign In' %}</button></a>
+								<a href="/">{% trans 'Back to web site' %}</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+
+{% comment %}
+**registration/registration_complete.html**
+
+Used after successful completion of the registration form. This
+template has no context variables of its own, and should simply inform
+the user that an email containing account-activation information has
+been sent.
+{% endcomment %}

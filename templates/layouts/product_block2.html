@@ -1,0 +1,148 @@
+{% load mytags %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<style>
+    .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #fff;
+  color: white;
+  transform: rotateY(180deg);
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    inset -7px -7px 10px 0px rgba(0,0,0,.1),7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  text-shadow:  2px 2px 3px rgba(255,255,255,.5),
+              -4px -4px 6px rgba(116, 125, 136, .2);
+  outline: none;
+}
+
+}
+
+</style>
+
+                <div class="swiper-slide">
+<!--                    <div class="row">-->
+<!--                         <a href="{% url 'products:detail' pk=product.pk %}">-->
+<!--                        <div class="col-12">-->
+<!--                            <img src="{{ product.image.url }}" style="width:100%" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="col-12">-->
+<!--                            <h3>{{ product.title }}</h3>-->
+<!--                            <p>{{ product.product_long_description|safe }}</p>-->
+<!--                            <span>${{ product.real_price }}</span>-->
+<!--                        </div>-->
+<!--                         </a>-->
+<!--                    </div>-->
+<div class="flip-card" id="flip-product" style="border-radius:10px">
+  <div class="flip-card-inner" style="width:250px;height:250px;border-radius:10px">
+        <div class="flip-card-front" style="border-radius:30px">
+            <img src="{{ product.image.url }}"  style="max-width:250px;width:100%;height:250px;border-radius:20px;background:#fff">
+        </div>
+        <div class="flip-card-back" style="border-radius:20px">
+            <h2 style="margin-top:10px">{{ product.title }}</h2>
+            <div class="texttt">
+                <p class="base_text"
+                   style="color:#000;max-width:230px;width:100%;margin:0 auto;margin-top:10%  ">
+                    {{ product.product_long_description|safe }}</p>
+            </div>
+            <div class="container">
+                <div class="prd-bottom" style="padding:0px 25px;margin-top:10%">
+                    <a style="color:#fff;font-weight:500;border-radius:50px"
+                       href="{% url 'products:add-cart' pk=product.pk %}?next={{request.path}}{{request.GET.urlencode}}"
+                       class="social-info">
+                        {% if product|in_cart:request %}
+                        <span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>
+                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px font-weight:600">
+                        </p>
+                        {% else %}
+                        <span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>
+                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px font-weight:600">
+                        </p>
+                        {% endif %}
+                    </a>
+
+                    <a href="{% url 'products:add-wishlist' pk=product.pk %}?next={{ request.path }}?{{request.GET.urlendcode }}" class="social-info">
+                                            <span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%;color:#fff">
+
+                                                {% if product|in_wishlist:request %}
+                                                   <i class="fas fa-heart"></i>
+                                                {% else %}
+                                                   <i class="far fa-heart"></i>
+                                                {% endif %}
+                                            </span>
+                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px font-weight:600">
+                        </p>
+                    </a>
+
+                    <a href="{% url 'products:detail' pk=product.pk %}" class="social-info">
+                            <span class="lnr lnr-move"
+                                  style="background-color:#EB5757;padding:10px;border-radius:50%;color:#fff"></span>
+                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px font-weight:600">
+
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+<!--                <div class="swiper-slide">Slide 2</div>-->
+<!--                <div class="swiper-slide">Slide 3</div>-->
+<!--                <div class="swiper-slide">Slide 4</div>-->
+<!--                <div class="swiper-slide">Slide 5</div>-->
+<!--                <div class="swiper-slide">Slide 6</div>-->
+<!--                <div class="swiper-slide">Slide 7</div>-->
+<!--                <div class="swiper-slide">Slide 8</div>-->
+<!--                <div class="swiper-slide">Slide 9</div>-->
+
+{% endblock %}

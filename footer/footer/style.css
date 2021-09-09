@@ -1,0 +1,686 @@
+/* Menu Bar */
+
+
+/* @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css"); */
+
+@media(max-width:990px) {
+    .navbarNav {
+        display: flex !important;
+        flex-direction: column !important;
+        right: -100% !important;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        /* background-color: #2f3640; */
+        /* top: 80px; */
+        transition: all.5s;
+        text-align: center;
+    }
+    .navbarNav.show {
+        left: 0;
+    }
+    #icon {
+        display: block;
+    }
+    .bar-img {
+        display: block !important;
+        opacity: 999;
+    }
+    .navbarstop ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+}
+
+section {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+label.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+}
+
+.nav-ul {
+    float: right;
+}
+
+.nav-li {
+    display: inline-block;
+    /* margin: 0 8px; */
+    line-height: 80px;
+    text-decoration: none;
+}
+
+a {
+    color: #fff;
+    font-size: 18px;
+    /* text-transform: uppercase; */
+    border: 1px solid transparent;
+    /* padding: 7px 10px; */
+    border-radius: 3px;
+}
+
+
+/* a#active,
+a:hover {
+
+} */
+
+.bar-img {
+    max-width: 50px;
+    width: 100%;
+    margin: 10px 0;
+    display: none;
+}
+
+#icon {
+    float: right;
+    /* margin-right: 40px; */
+    cursor: pointer;
+}
+
+@media(max-width:990px) {
+    #icon {
+        display: block;
+    }
+    .navbarHook {
+        padding: 10px 40px !important;
+    }
+    .btnpro span {
+        display: none;
+    }
+    .navbarFirst {
+        background-color: #2f3640 !important;
+    }
+    .bar-img {
+        display: block;
+        width: 30px !important;
+    }
+    .navbarFullIcons {
+        padding-right: 15px !important;
+    }
+    .nav-ul {
+        position: absolute;
+        width: 100%;
+        /* height: 100vh; */
+        background-color: #f1f1f1;
+        top: 135px;
+        left: -100%;
+        transition: all.5s;
+        text-align: center;
+    }
+    .nav-li {
+        display: block;
+        /* margin: 50px 0; */
+        line-height: 30px;
+        color: #fff;
+        padding: 20px !important;
+    }
+    a#active,
+    a:hover {
+        border: none;
+        /* color: #3498db; */
+    }
+    .nav-ul.show {
+        left: 0;
+    }
+    .footerName {
+        text-align: center;
+        /* font-size: 18px !important; */
+    }
+    .footerText {
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        /* font-size: 14px !important; */
+    }
+    .footerLink {
+        margin-bottom: 10px !important;
+        /* font-size: 16px !important; */
+    }
+    .footerDesc {
+        text-align: center;
+        /* font-size: 16px !important; */
+    }
+    .footerButton {
+        /* font-size: 16px !important; */
+    }
+    .footerFullIcons {
+        margin: 0 auto;
+    }
+    .footerButton {
+        /* font-size: 15px !important; */
+    }
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .footerNav ul li {
+        padding: 5px 0;
+    }
+    .footerInput {
+        margin: 0 auto;
+    }
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+p {
+    color: #000;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family:'Spartan', sans-serif
+}
+
+a,
+button:hover {
+    cursor: pointer;
+}
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar-img {
+    max-width: 50px;
+    width: 100%;
+    margin: 10px 0;
+    display: none;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+
+
+/* navbar css */
+
+.navbarFirst {
+    background: #EB5757 !important;
+    padding: 15px 0;
+}
+
+.navbarStart {
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+.navDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.navbarLogo {
+    display: flex;
+    align-items: center;
+}
+
+.navbarNav {
+    display: flex;
+    /* display: none; */
+    align-items: center;
+}
+
+.logoName {
+    display: none;
+    /* margin-bottom: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  color: #013766;
+  padding-left: 10px;
+  width: 100%; */
+}
+
+.btnpro {
+    color: #fff !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.btnpro span {
+    color: #fff !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.btnunpro {
+    color: #000 !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 21px;
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.btnunprops {
+    color: #000 !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 21px;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.dropbtn {
+    background: inherit;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.dropbtn:hover {
+    background: inherit !important;
+}
+
+.linknav {
+    list-style-type: none;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbarstop ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarstop ul li a {
+    margin-right: 20px;
+}
+
+.navrow {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.navbarFullIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Footer */
+
+.footerStart {
+    background-image: url(./img/footer.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.footerFirst {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    max-width: 330px;
+    width: 100%;
+}
+
+.footerSecond {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footerName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: #EB5757;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footerLink {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footerLinks {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.footerDesc {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    max-width: 330px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.footerInput {
+    background-color: #fff;
+    max-width: 310px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7px;
+    border-radius: 9px;
+}
+
+.evelopeicon {
+    color: #323232;
+}
+
+.footerInclass {
+    background: inherit;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.footerButton {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+    background-color: #EB5757;
+    border: none;
+    border-radius: 9px;
+    padding: 7px;
+}
+
+.footerFullIcons {
+    display: flex;
+    align-items: center;
+    max-width: 180px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.emailicon {
+    font-size: 26px;
+    color: #fff;
+}
+
+.emailicon:hover {
+    cursor: pointer;
+}
+
+.footerLogo {
+    max-width: 100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footerImg {
+    width: 80px;
+}
+
+.footerRow {
+    margin-top: 20px;
+}
+
+.hr3 {
+    color: #f3f3f3;
+}
+
+.footerNav {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.footerNav ul li .footerHelp {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding-bottom: 6px;
+    transition: all.2s;
+}
+
+.footerNav ul li .footerHelp:hover {
+    border-bottom: 1px solid#fff;
+}
+
+.fotEndDesc {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.mainicon {
+    display: flex;
+}
+
+.navbarHook {
+    display: flex;
+    align-items: center;
+    padding: 10px 70px;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    /* box-shadow: 8px 8px 3px #aaaaaa; */
+}
+
+@media (max-width:600px) {}
+
+@media (max-width:400px) {
+    .navbarHook {
+        padding: 10px !important;
+    }
+    .btnpro {
+        font-size: 12px !important;
+    }
+    .bar-img {
+        width: 50px !important;
+        background-color: #f1f1f1;
+    }
+    .logoNav {
+        width: 40px;
+    }
+    .navbarstop ul li a {
+        margin-right: 0;
+        padding: 20px;
+    }
+    .nav-li {
+        padding: 20px 0 !important;
+        font-size: 22px !important;
+    }
+    .nav-li:hover {
+        border-bottom: 1px solid#222;
+    }
+    .navbarNav {
+        padding-top: 50px !important;
+    }
+    .nav-ul {
+        top: 122px !important;
+    }
+    .bar-img {
+        width: 25px !important;
+    }
+    .navbarFullIcons {
+        padding-right: 10px !important;
+    }
+    .oldicon {
+        font-size: 14px !important;
+    }
+    .btnunprops {
+        font-size: 15px !important;
+    }
+    .footerName {
+        text-align: center;
+        font-size: 18px !important;
+    }
+    .footerText {
+        text-align: center;
+        font-size: 14px !important;
+    }
+    .footerLink {
+        margin-bottom: 10px !important;
+        font-size: 16px !important;
+    }
+    .footerDesc {
+        text-align: center;
+        font-size: 16px !important;
+    }
+    .footerButton {
+        font-size: 16px !important;
+    }
+    .footerFullIcons {
+        margin: 0 auto;
+    }
+    .footerButton {
+        font-size: 15px !important;
+    }
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .footerNav ul li {
+        padding: 5px 0;
+    }
+    .fotEndDesc {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width:270px) {
+    .btnpro {
+        font-size: 11px !important;
+    }
+    .nav-ul {
+        top: 140px !important;
+    }
+}

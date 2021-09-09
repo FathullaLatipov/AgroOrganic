@@ -1,0 +1,498 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load mytags %}
+{% block content %}
+<style>
+
+.css-square:hover {
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+}
+
+.flip-card {
+  background-color: #fff;
+  max-width: 300px;
+  width:100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 7s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(120deg);
+}
+
+.flip-card-front, .flip-card-back {
+  background:#fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+
+
+
+.flip-card-back {
+  background-color: yellow;
+  color: white;
+  transform: rotateY(250deg);
+}
+
+ .swiper {
+        width: 100%;
+        height: 40vh;
+      }
+      .swiper_start{
+          padding: 0px 5px;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+<!--.load {-->
+<!--    position: relative;-->
+<!--    text-align: right;-->
+<!--    z-index: 1;-->
+<!--    weight:100px;-->
+<!--    border-radius:10px;-->
+<!--    transition:.3s;-->
+<!--}-->
+
+<!--.load:hover{-->
+<!--    position: relative;-->
+<!--    text-align: right;-->
+<!--    z-index: 1;-->
+<!--    weight:100px;-->
+<!--    border-radius:10px;-->
+<!--    transition:.3s;-->
+<!--    background-color:#EB5757;-->
+<!--    box-shadow:3px 3px 3px 3px #888-->
+<!--}-->
+
+
+</style>
+<!-- start banner Area -->
+ <section id="section-1">
+    <div class="content-slider">
+      <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+      <input type="radio" id="banner2" class="sec-1-input" name="banner">
+      <input type="radio" id="banner3" class="sec-1-input" name="banner">
+      <input type="radio" id="banner4" class="sec-1-input" name="banner">
+      <div class="slider" style="">
+        <div id="top-banner-1" class="banner">
+          <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);">
+            <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Creative Template' %}</h2>
+            <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Welcome' %}<br>{% trans 'to Agro Organic Food' %}</h1>
+            <div class="line"></div>
+            <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
+          </div>
+        </div>
+        <div id="top-banner-2" class="banner" >
+          <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);">
+            <h2 style="color:#fff;;font-family:'Spartan', sans-serif">{% trans 'What We Do' %}</h2>
+            <h1 style="color:#fff;;font-family:'Spartan', sans-serif">{% trans 'Great' %}<br>{% trans 'Agro Organic Food' %}</h1>
+            <div class="line"></div>
+            <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
+          </div>
+        </div>
+        <div id="top-banner-3" class="banner">
+          <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0 .2);">
+            <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Here We Are' %}</h2>
+            <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'We Are' %}<br>{% trans 'Agro Organic Food' %}</h1>
+            <div class="line"></div>
+            <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
+          </div>
+        </div>
+        <div id="top-banner-4" class="banner" style="background-color: rgba(0, 0, 0, 0, .5);">
+          <div class="banner-inner-wrapper" >
+            <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Our Contacts' %}</h2>
+            <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Welcome' %}<br>{% trans 'to Agro Organic Food' %}</h1>
+            <div class="line"></div>
+            <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="controls">
+          <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span>01</span> Intro</label>
+          <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span>02</span> Work</label>
+          <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span>03</span> About</label>
+          <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span>04</span> Contacts</label>
+        </div>
+      </nav>
+    </div>
+  </section>
+<!-- End banner Area -->
+
+<!-- start features Area -->
+
+<section class="features-area section_gap p-5 ">
+    <div class="container">
+        <div class="row features-inner" style="border-radius:30px">
+            <!-- single features -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-3">
+                <div class="single-features">
+                            <div class="css-square">
+                                <img src="{% static '/img/icons/location.png' %}" style="max-width:50px;width:100%" alt="">
+                            </div>
+                    <p class="info1" >{% trans 'Удобная локация' %}</p>
+
+                </div>
+
+            </div>
+            <!-- single features -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-3">
+                <div class="single-features">
+                            <div class="css-square">
+                                <img src="{% static '/img/icons/car.png' %}" style="max-width:60px;width:100%" alt="">
+                            </div>
+                    <p class="info2">{% trans 'Быстрая доставка' %}</p>
+                </div>
+            </div>
+            <!-- single features -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-3">
+                <div class="single-features">
+                            <div class="css-square">
+                                <img src="{% static '/img/icons/call-center.png' %}" style="max-width:50px;width:100%" alt="">
+                            </div>
+                    <p class="info1">{% trans 'Колл центр' %}</p>
+                </div>
+            </div>
+            <!-- single features -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-3">
+                <div class="single-features">
+                            <div class="css-square">
+                                <img src="{% static '/img/icons/dollar.png' %}" style="max-width:50px;width:100%" alt="">
+                            </div>
+                    <p class="info1">{% trans 'Политика возврата' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end features Area -->
+
+<!-- Start category Area -->
+<section class="category-area">
+    <div class="container-fluid">
+        <h1 class="text-center mb-0" style="font-weight:600;font-family:'Spartan', sans-serif">{% trans 'Category' %}</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <div data-aos="fade-right">
+                             <a href="products/?category=1">
+                            <div class="single-deal">
+                                <div class="overlay"></div>
+                                <img class="cats img-fluid" src="{% static 'img/category/Rectangle 79.png' %}"
+                                     style="border-radius:20px;" alt="">
+                                <div class="deal-details">
+                                    {% for cat in cats %}
+                                    <h6 class="deal-title" style="font-family:'Spartan', sans-serif;font-weight:600">{% trans 'Fruits' %}</h6>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                                    {% for cat in cats %}
+                                    <h6 class="deal-title2">{% trans 'Fruits' %}</h6>
+                                    {% endfor %}
+                        </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-deal">
+                            <div data-aos="fade-left">
+                                <a href="/products/?category=2">
+                            <div class="overlay" style="height:85%;margin-top:9%"></div>
+                            <br>
+                            <img class="cats img-fluid" src="{% static 'img/category/Rectangle 80.png' %}"
+                                 style="border-radius:20px;height: 243px;" alt="">
+
+                                <div class="deal-details">
+                                    {% for cat in cats %}
+                                    <h6 class="deal-title" style="font-family:'Spartan', sans-serif;font-weight:600">
+                                        {% trans 'Vegetables' %}</h6>
+                                    {% endfor %}
+                                </div>
+                                 {% for cat in cats %}
+                                    <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
+                                        {% trans 'Vegetables' %}</h6>
+                                    {% endfor %}
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-deal">
+                            <div data-aos="fade-right">
+                                 <a href="/products/?category=4">
+                            <div class="overlay" style="height:85%;margin-top:9%"></div>
+                            <br>
+                            <img class="cats img-fluid" src="{% static 'img/category/Rectangle 82.png' %}"
+                                 style="border-radius:20px;height: 242px;" alt="">
+
+                                <div class="deal-details">
+                                    <h6 class="deal-title" style="font-family:'Spartan', sans-serif;font-weight:600">{% trans 'Parsley' %}</h6>
+                                </div>
+
+                                    {% for cat in cats %}
+                                    <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
+                                        {% trans 'Parsley' %}</h6>
+                                    {% endfor %}
+                                     </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div data-aos="fade-left">
+                             <a href="/products/?category=3">
+                            <div class="single-deal">
+                                <div class="overlay" style="background:"></div>
+                                <img class="cats img-fluid " src="{% static 'img/category/Rectangle 81.png' %}"
+                                     style="border-radius:20px;" alt="">
+                                <div class="deal-details">
+                                    {% for cat in cats %}
+                                    <h6 class="deal-title" style="font-family:'Spartan', sans-serif;font-weight:600">
+                                        {% trans 'Dried fruits' %}</h6>
+                                    {% endfor %}
+                                </div>
+                                 {% for cat in cats %}
+                                    <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600;padding:20px">
+                                        {% trans 'Dried fruits' %}</h6>
+                                    {% endfor %}
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End category Area -->
+
+<!-- start product Area -->
+
+<!-- single product slide -->
+<div class="single-product-slider">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <div class="section-title">
+                    <h1 style="font-weight:600;font-family:'Spartan', sans-serif">{% trans 'Latest Products' %}</h1>
+                </div>
+            </div>
+        </div>
+            <div id="message">
+
+            </div>
+        <div class="row">
+            {% for product in products %}
+              <div class="pros col-md-3 m-auto">
+                      {% include 'layouts/product_block.html' %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="swiper_start">
+           <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                     {% for product in products %}
+                        {% include 'layouts/product_block2.html' %}
+                     {% endfor %}
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+         </div>
+
+</div>
+<!-- single product slide -->
+<div class="single-product-slider">
+<!--            <div class="container">-->
+<!--                <div class="row justify-content-center">-->
+<!--                    <div class="col-lg-6 text-center">-->
+<!--                        <div class="section-title">-->
+<!--                            <h1>Coming Products</h1>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                   {% for product in products %}-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                            {% include 'layouts/product_block.html' %}-->
+<!--                    </div>-->
+<!--                   {% endfor %}-->
+<!--                </div>-->
+<!--            </div>-->
+</div>
+
+<!-- end product Area -->
+
+
+<div class="clock1" >
+            <div class="sale1">
+                <img src="{% static 'img/banner/sale.png' %}"
+                     style="center;background-size: cover;width: 100%;max-width: 500px;" alt="">
+            </div>
+            <div class="wrap" style="display:flex;align-items:center;max-width: 720px;width:100%;margin:0px auto">
+                <div class="countdown">
+                    <div class="bloc-time hours" data-init-value="24">
+                        <span class="count-title" style="font-family:'Spartan', sans-serif;font-weight:bold">{% trans 'Hours' %}</span>
+
+                        <div class="figure hours hours-1">
+                            <span class="top">2</span>
+                            <span class="top-back">
+          <span>2</span>
+        </span>
+                            <span class="bottom">2</span>
+                            <span class="bottom-back">
+          <span>2</span>
+        </span>
+                        </div>
+
+                        <div class="figure hours hours-2">
+                            <span class="top">4</span>
+                            <span class="top-back">
+          <span>4</span>
+        </span>
+                            <span class="bottom">4</span>
+                            <span class="bottom-back">
+          <span>4</span>
+        </span>
+                        </div>
+                    </div>
+
+                    <div class="bloc-time min" data-init-value="0">
+                        <span class="count-title" style="font-family:'Spartan', sans-serif;font-weight:bold">{% trans 'Minutes' %}</span>
+
+                        <div class="figure min min-1">
+                            <span class="top">0</span>
+                            <span class="top-back">
+          <span>0</span>
+        </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+          <span>0</span>
+        </span>
+                        </div>
+
+                        <div class="figure min min-2">
+                            <span class="top">0</span>
+                            <span class="top-back">
+          <span>0</span>
+        </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+          <span>0</span>
+        </span>
+                        </div>
+                    </div>
+
+                    <div class="bloc-time sec" data-init-value="0">
+                        <span class="count-title" style="font-family:'Spartan', sans-serif;font-weight:bold">{% trans 'Seconds' %}</span>
+
+                        <div class="figure sec sec-1">
+                            <span class="top">0</span>
+                            <span class="top-back">
+          <span>0</span>
+        </span>
+                            <span class="bottom">0</span>
+                            <span class="bottom-back">
+          <span>0</span>
+        </span>
+                        </div>
+
+                        <div class="figure sec sec-2">
+                            <span class="top">0</span>
+                            <span class="top-back">
+          <span>0</span>
+        </span>
+                            <span class="bottom" style="">0</span>
+                            <span class="bottom-back">
+          <span>0</span>
+        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<br>
+<script>
+    function add_to_cart(element,pk){
+        $.getJSON('/en/products/' + "cart/" + pk, function (data) {
+          if (!data.status) {
+                $('#message').append(`<div style="padding:5px">
+                        <div id="inner-message" class="alert alert-error">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            Error
+                        </div>
+                    </div>`);
+          } else {
+                if (data.added) {
+                    $('#message').append(`<div style="padding:5px">
+                        <div id="inner-message" class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            Added
+                        </div>
+                    </div>`);
+                    element.innerHTML = '<span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>'
+                } else {
+                   $('#message').append(`<div style="padding:5px">
+                        <div id="inner-message" class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            Removed
+                        </div>
+                    </div>`);
+                    element.innerHTML = '<span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>'
+                }
+                $('#cart_length').html(data.cart_len);
+          }
+        });
+    }
+</script>
+{% endblock %}

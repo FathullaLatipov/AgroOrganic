@@ -1,0 +1,123 @@
+{% load static %}
+{% load i18n %}
+{% load mytags %}
+
+<header class="header_area sticky-header">
+    <div class="main_menu">
+        <div class="navbar navbar-expand-lg navbar-light main_box" style="background-color:#eb5757">
+            <div class="container">
+                <ul class="nav navbar-nav menu_nav">
+                    <li class="nav-item submenu dropdown">
+                        {% get_current_language as lang %}
+                        {% get_available_languages as langs %}
+                        <a href="#" class="nav-link dropdown-toggle" style="color:#fff;font-weight:300"
+                           data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">{{ lang }} <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            {% for l in langs %}
+                            {% if l.0 != lang %}
+                            <li class="nav-item"><a class="nav-link" href="{% get_url_lang request l.0 %}">{{ l.0 }}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav menu_nav">
+                    <li class="nav-item submenu dropdown" style="margin-left:-72%">
+                        {% get_current_language as lang %}
+                        {% get_available_languages as langs %}
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                           style="color:#fff;font-weight:400" role="button" aria-haspopup="true"
+                           aria-expanded="false"><img
+                                src="https://img.icons8.com/pastel-glyph/24/000000/person-male--v1.png"/>My account <i
+                                class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="nav-link" href="{% get_url_lang request l.0 %}">Login</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light main_box">
+            <div class="container">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+
+
+                <a class="navbar-brand logo_h" href="{% url 'contact:home' %}">
+                    <img src="{% static 'img/logo1.png' %}" style="width:20%;" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" style="padding: 3px 9px;"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item {% if request.path == '/'|add:lang|add:'/' %} active {% endif %}">
+                            <a class="nav-link" href="{% url 'contact:home' %}" style="">{% trans 'Home' %}</a>
+                        </li>
+                        <li class="nav-item {%  if '/products/' in request.path %}active{% endif %}">
+                            <a class="nav-link {% url 'products:lists' %}" href="{% url 'products:lists' %}">{% trans 'Shop' %}</a>
+                        </li>
+                        <li class="nav-item {% if '/blog/' in request.path %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'contact:blog' %}">{% trans 'About Us' %}</a>
+                        </li>
+                        <li class="nav-item {% if '/contact/' in request.path %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'contact:contact' %}">{% trans 'Contact' %}</a>
+                        </li>
+                        <li class="nav-item submenu dropdown">
+                            <sapn href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                  aria-haspopup="true"
+                                  aria-expanded="false" style="cursor:pointer">
+                                {% if request.user.is_authenticated %}
+                                {% trans 'Log out' %}
+                                {% else %}
+                                {% trans 'Sign in' %}
+                                {% endif %}
+                                <i class="fa fa-caret-down" aria-hidden="true"></i></sapn>
+                            <ul class="dropdown-menu">
+                                {% if request.user.is_authenticated %}
+                                <li class="nav-item"><a href="{% url 'orders:history' %}" class="nav-link"><span
+                                        class="">History</span></a></li>
+                                <li class="nav-item"><a href="{% url 'profile:home' %}" class="nav-link"><span class="">Profile</span></a>
+                                </li>
+                                <li class="nav-item"><a href="{% url 'auth_logout' %}" class="nav-link"><span class="">{% trans 'Log out' %}</span></a>
+                                </li>
+                                {% else %}
+                                <li class="nav-item"><a href="{% url 'auth_login' %}" class="cart"><span style="color:red;line-height: 45px;padding:15px">{% trans 'Sign in' %}</span></a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </li>
+
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item"><a href="{% url 'products:cart' %}" class="cart"><span class="ti-bag">{% get_cart_count request %}</span></a>
+                        </li>
+                        <li class="nav-item " ><a href="{% url 'products:wishlist' %}"  class="wishlist"><span
+                                class="ti-heart" >{% get_wishlist_count request %}</span></a></li>
+                        <li class="nav-item">
+                            <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="search_input" id="search_input_box">
+        <div class="container">
+            <form action="{% url 'products:lists' %}" class="d-flex justify-content-between">
+                <input type="text" class="form-control" name="q" value="{{ request.GET.q }}" placeholder="Search Here">
+                <button type="submit" class="btn"></button>
+                <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+            </form>
+        </div>
+    </div>
+</header>

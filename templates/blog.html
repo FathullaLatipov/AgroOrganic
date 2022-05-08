@@ -1,113 +1,66 @@
 {% extends 'layouts/base.html' %}
+{% load i18n %}
 {% load static %}
 {% block content %}
-
+<style>
+.box-white {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+</style>
     <!-- Start Banner Area -->
+    <section class="banner-area organic-breadcrumb">
+		<div class="container">
+			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+				<div class="col-first">
+					<h1 style="font-family:'Spartan', sans-serif">{% trans 'About us' %}</h1>
+					<nav class="d-flex align-items-center">
+						<a href="index.html" style="font-family:'Sparta', sans-serif">{% trans 'Home' %}<span class="lnr lnr-arrow-right"></span></a>
+						<a href="category.html" style="font-family:'Sparta', sans-serif">{% trans 'About us' %}</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+    <br>
+    <h3 style="text-align: center">About us</h3>
+    <div class="container">
+      <div class="box-white">
+        <div class="row">
+            <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore porro quos suscipit ullam? A aliquam at atque blanditiis culpa cum cupiditate delectus dignissimos distinctio dolor doloribus est eveniet, fuga harum ipsa laboriosam laborum mollitia nam obcaecati, odit perspiciatis quasi quod ratione recusandae tempore veniam vero voluptas. Culpa error expedita ipsam nam nihil nulla quasi reprehenderit, unde veritatis? Adipisci aliquid consequuntur dolore harum quaerat quibusdam sapiente tempore tenetur unde vel. Accusantium aliquam aut autem distinctio dolore, dolores excepturi expedita, laboriosam magni odio perferendis provident qui sapiente sequi tempora tempore, voluptas?</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://www.freepnglogos.com/uploads/vegetables-png/buy-high-quality-organic-vegetables-and-fruits-online-7.png" alt="">
+                </div>
 
+            </div>
+        </div>
+     <div class="box-white">
+        <div class="row">
+             <div class="col-md-6">
+                 <img class="img-fluid" src="https://www.freepnglogos.com/uploads/vegetables-png/buy-high-quality-organic-vegetables-and-fruits-online-7.png" alt="">
+                </div>
 
-    <!-- End Banner Area -->
-    <section class="slide-wrapper" style="width:100%;height:100vh">
-            <div id="myCarousel" class="carousel slide"  style="width:100%;height:100vh">
-                <!-- Indicators -->
-                <ol class="carousel-indicators m-auto">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                 </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" style="background: url({% static 'img/banner/about_page.png' %}) center no-repeat;">
-                    <div class="item item1 active">
-                        <div class="fill" style=" width:100%;height:100vh">
-                            <div class="inner-content">
-                                <div class="container">
-                                    <div class="carousel-img">
-                                    <img src="{% static 'img/banner/about2.png' %}" style="text-align:center;max-width:500px;width:100%;margin:auto" alt="sofa" class="img img-responsive" style="width:400px" />
-                                </div>
-                                <div class="carousel-desc">
-
-                                    <h2 style="color:#fff;font-family:'Spartan', sans-serif;text-align:center;padding:10px"><br>Our Company</h2>
-                                    <p style="color:#fff;font-size:17px;font-family:'Spartan', sans-serif;padding:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item item2">
-                        <div class="fill" style="width:100%;height:100vh">
-                            <div class="inner-content">
-                                <div class="container">
-                                    <div class="carousel-img">
-                                    <img src="{% static 'img/banner/ferma.png' %}" style="text-align:center;max-width:500px;width:100%;margin:auto;padding:5px" alt="white-sofa" style="width:28%" class="img img-responsive" />
-                                </div>
-                                <div class="carousel-desc">
-
-                                    <h2 style="color:#fff;font-family:'Spartan', sans-serif;text-align:center;padding:10px"><br>Why Choose Us</h2>
-                                    <p style="color:#fff;font-size:17px;font-family:'Spartan', sans-serif;padding:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item item3">
-                        <div class="fill" style="width:100%;height:100vh;">
-                            <div class="inner-content">
-                                <div class="container" style="padding-top:10%">
-                                    <div class="col-md-3">
-                                    <div class="carousel-img">
-                                        <img src="{% static 'img/banner/logo11.png' %}" alt="sofa" class="img img-responsive" style="width:200px" />
-                                    </div>
-                                </div>
-
-                                <div class="col-md-9 text-left">
-                                    <div class="carousel-desc">
-
-                                        <h2 style="color:#fff;font-family:'Spartan', sans-serif">Our Services</h2>
-                                        <p style="color:#fff;font-size:17px;font-family:'Spartan', sans-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                    </div>
-                                </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore porro quos suscipit ullam? A aliquam at atque blanditiis culpa cum cupiditate delectus dignissimos distinctio dolor doloribus est eveniet, fuga harum ipsa laboriosam laborum mollitia nam obcaecati, odit perspiciatis quasi quod ratione recusandae tempore veniam vero voluptas. Culpa error expedita ipsam nam nihil nulla quasi reprehenderit, unde veritatis? Adipisci aliquid consequuntur dolore harum quaerat quibusdam sapiente tempore tenetur unde vel. Accusantium aliquam aut autem distinctio dolore, dolores excepturi expedita, laboriosam magni odio perferendis provident qui sapiente sequi tempora tempore, voluptas?</p>
                 </div>
             </div>
-    </section>
-    <!-- Swiper -->
+        </div>
+     <div class="box-white">
+        <div class="row">
+            <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error labore porro quos suscipit ullam? A aliquam at atque blanditiis culpa cum cupiditate delectus dignissimos distinctio dolor doloribus est eveniet, fuga harum ipsa laboriosam laborum mollitia nam obcaecati, odit perspiciatis quasi quod ratione recusandae tempore veniam vero voluptas. Culpa error expedita ipsam nam nihil nulla quasi reprehenderit, unde veritatis? Adipisci aliquid consequuntur dolore harum quaerat quibusdam sapiente tempore tenetur unde vel. Accusantium aliquam aut autem distinctio dolore, dolores excepturi expedita, laboriosam magni odio perferendis provident qui sapiente sequi tempora tempore, voluptas?</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://www.freepnglogos.com/uploads/vegetables-png/buy-high-quality-organic-vegetables-and-fruits-online-7.png" alt="">
+                </div>
 
+            </div>
+        </div>
+    </div>
 
-    <!--================Blog Categorie Area =================-->
-<!--    <section class="blog_categorie_area">-->
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                {% for post in object_list %}-->
-<!--                 <div class="col-lg-4">-->
-<!--                    <div class="categories_post">-->
-<!--                        <a href="{% url 'blog:single' pk=post.pk %}">-->
-<!--                        <img src="{{ post.image.url }}" alt="post">-->
-<!--                        <div class="categories_details">-->
-<!--                            <div class="categories_text">-->
-<!--                                    <h5>{{ post.title }}</h5>-->
-<!--                                <div class="border_line"></div>-->
-<!--                                <p>Enjoy your social life together</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                 </div>-->
-<!--                {% endfor %}-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-
-    <!--================Blog Categorie Area =================-->
 
 {% endblock %}

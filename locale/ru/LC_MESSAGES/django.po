@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-06 16:12+0500\n"
+"POT-Creation-Date: 2022-05-07 12:44+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,413 +20,413 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\agros1\settings.py:105
+#: agros1/settings.py:105
 msgid "English"
 msgstr ""
 
-#: .\agros1\settings.py:106
+#: agros1/settings.py:106
 msgid "Russian"
 msgstr ""
 
-#: .\agros1\settings.py:107
+#: agros1/settings.py:107
 msgid "Uzbek"
 msgstr ""
 
-#: .\pages\apps.py:7
+#: pages/apps.py:7
 msgid "pages"
 msgstr "страницы"
 
-#: .\pages\models.py:6 .\products\models.py:21 .\products\models.py:133
+#: pages/models.py:6 products/models.py:21 products/models.py:133
 msgid "name"
 msgstr "имя"
 
-#: .\pages\models.py:7 .\products\models.py:134
+#: pages/models.py:7 products/models.py:134
 msgid "email"
 msgstr ""
 
-#: .\pages\models.py:8
+#: pages/models.py:8
 msgid "message"
 msgstr "сообщение"
 
-#: .\pages\models.py:9 .\products\models.py:10 .\products\models.py:35
-#: .\products\models.py:49 .\products\models.py:61 .\products\models.py:73
-#: .\products\models.py:109 .\products\models.py:139
+#: pages/models.py:9 products/models.py:10 products/models.py:35
+#: products/models.py:49 products/models.py:61 products/models.py:73
+#: products/models.py:109 products/models.py:139
 msgid "created_at"
 msgstr "время создания"
 
-#: .\pages\models.py:15
+#: pages/models.py:15
 msgid "contact"
 msgstr "контакт"
 
-#: .\pages\models.py:16
+#: pages/models.py:16
 msgid "contacts"
 msgstr "контакты"
 
-#: .\products\apps.py:8 .\products\models.py:129
+#: products/apps.py:8 products/models.py:129
 msgid "products"
 msgstr "продукты"
 
-#: .\products\models.py:9 .\products\models.py:34 .\products\models.py:84
+#: products/models.py:9 products/models.py:34 products/models.py:84
 msgid "title"
 msgstr "название"
 
-#: .\products\models.py:16 .\products\models.py:94
+#: products/models.py:16 products/models.py:94
 msgid "category"
 msgstr "катрегория"
 
-#: .\products\models.py:17
+#: products/models.py:17
 msgid "categories"
 msgstr "категории"
 
-#: .\products\models.py:22
+#: products/models.py:22
 msgid "home_cat"
 msgstr ""
 
-#: .\products\models.py:41
+#: products/models.py:41
 msgid "product tag"
 msgstr "тег продукта"
 
-#: .\products\models.py:42
+#: products/models.py:42
 msgid "product tags"
 msgstr "тег продуктов"
 
-#: .\products\models.py:48 .\products\models.py:55 .\products\models.py:56
-#: .\products\models.py:96
+#: products/models.py:48 products/models.py:55 products/models.py:56
+#: products/models.py:96
 msgid "width"
 msgstr "ширина"
 
-#: .\products\models.py:60 .\products\models.py:67 .\products\models.py:68
-#: .\products\models.py:98
+#: products/models.py:60 products/models.py:67 products/models.py:68
+#: products/models.py:98
 msgid "height"
 msgstr "высота"
 
-#: .\products\models.py:72 .\products\models.py:79 .\products\models.py:80
-#: .\products\models.py:100
+#: products/models.py:72 products/models.py:79 products/models.py:80
+#: products/models.py:100
 msgid "weight"
 msgstr "масса"
 
-#: .\products\models.py:85 .\products\models.py:152
+#: products/models.py:85 products/models.py:152
 msgid "image"
 msgstr "изображение"
 
-#: .\products\models.py:86
+#: products/models.py:86
 msgid "price"
 msgstr "цена"
 
-#: .\products\models.py:87
+#: products/models.py:87
 msgid "sku"
 msgstr "ID"
 
-#: .\products\models.py:88
+#: products/models.py:88
 msgid "discount"
 msgstr "скидка"
 
-#: .\products\models.py:89
+#: products/models.py:89
 msgid "real price"
 msgstr "цена"
 
-#: .\products\models.py:90
+#: products/models.py:90
 msgid "short_description"
 msgstr "короткая описания"
 
-#: .\products\models.py:91
+#: products/models.py:91
 msgid "product_long_description"
 msgstr "длинное описания продукта"
 
-#: .\products\models.py:92
+#: products/models.py:92
 msgid "long_description"
 msgstr "длинное описания"
 
-#: .\products\models.py:101
+#: products/models.py:101
 msgid "tags"
 msgstr "теги"
 
-#: .\products\models.py:106
+#: products/models.py:106
 msgid "wishlist"
 msgstr ""
 
-#: .\products\models.py:128 .\products\models.py:151
+#: products/models.py:128 products/models.py:151
 msgid "product"
 msgstr "продукт"
 
-#: .\products\models.py:135
+#: products/models.py:135
 msgid "phone"
 msgstr "телефон"
 
-#: .\products\models.py:136 .\products\models.py:145
+#: products/models.py:136 products/models.py:145
 msgid "comment"
 msgstr "коммент"
 
-#: .\products\models.py:138
+#: products/models.py:138
 msgid "post"
 msgstr "пост"
 
-#: .\products\models.py:146
+#: products/models.py:146
 msgid "comments"
 msgstr "комменты"
 
-#: .\products\models.py:155
+#: products/models.py:155
 msgid "product image"
 msgstr "изображения продукта"
 
-#: .\products\models.py:156
+#: products/models.py:156
 msgid "product images"
 msgstr "изображения продуктов"
 
-#: .\templates\checkout.html:10 .\templates\checkout.html:13
-#: .\templates\checkout2.html:11 .\templates\checkout2.html:14
-#: .\templates\layouts\header2.html:576
+#: templates/checkout.html:10 templates/checkout.html:13
+#: templates/checkout2.html:11 templates/checkout2.html:14
+#: templates/layouts/header2.html:578
 msgid "Checkout"
 msgstr "Корзина"
 
-#: .\templates\checkout.html:12 .\templates\checkout2.html:13
-#: .\templates\contact.html:12 .\templates\history.html:12
-#: .\templates\layouts\footer.html:353 .\templates\layouts\header.html:63
-#: .\templates\registration\login.html:12
-#: .\templates\registration\registration_form.html:15 .\templates\shop.html:16
-#: .\templates\shopping-cart.html:13 .\templates\single-product.html:13
-#: .\templates\wishlist.html:12
+#: templates/checkout.html:12 templates/checkout2.html:13
+#: templates/contact.html:12 templates/history.html:12
+#: templates/layouts/footer.html:353 templates/layouts/header.html:63
+#: templates/registration/login.html:12
+#: templates/registration/registration_form.html:15 templates/shop.html:16
+#: templates/shopping-cart.html:13 templates/single-product.html:13
+#: templates/wishlist.html:12
 msgid "Home"
 msgstr "Главная"
 
-#: .\templates\contact.html:10 .\templates\layouts\footer.html:356
+#: templates/contact.html:10 templates/layouts/footer.html:356
 msgid "Contacts"
 msgstr "контакт"
 
-#: .\templates\contact.html:13 .\templates\layouts\header.html:72
+#: templates/contact.html:13 templates/layouts/header.html:72
 msgid "Contact"
 msgstr "контакт"
 
-#: .\templates\contact.html:54
+#: templates/contact.html:54
 msgid "Enter your name"
 msgstr "Ваше имя"
 
-#: .\templates\contact.html:57
+#: templates/contact.html:57
 msgid "Enter email address"
 msgstr "Ваш email"
 
-#: .\templates\contact.html:60
+#: templates/contact.html:60
 msgid "Enter Message"
 msgstr "сообщение"
 
-#: .\templates\contact.html:62
+#: templates/contact.html:62
 msgid "Send Message"
 msgstr "сообщение"
 
-#: .\templates\history.html:10 .\templates\history.html:13
-#: .\templates\layouts\header2.html:578
+#: templates/history.html:10 templates/history.html:13
+#: templates/layouts/header2.html:580
 msgid "My account"
 msgstr "Мой аккаунт"
 
-#: .\templates\history.html:23
+#: templates/history.html:23
 msgid "Quantity"
 msgstr "Кол-во"
 
-#: .\templates\history.html:24
+#: templates/history.html:24
 msgid "id"
 msgstr ""
 
-#: .\templates\history.html:25 .\templates\layouts\footer.html:354
+#: templates/history.html:25 templates/layouts/footer.html:354
 msgid "Products"
 msgstr "продукты"
 
-#: .\templates\history.html:26 .\templates\products_filter.html:17
+#: templates/history.html:26 templates/products_filter.html:17
 msgid "Price"
 msgstr "Цена"
 
-#: .\templates\history.html:27
+#: templates/history.html:27
 msgid "Created_at"
 msgstr "Время создания"
 
-#: .\templates\index.html:124
+#: templates/index.html:124
 msgid "Creative Template"
 msgstr "Творческий шаблон"
 
-#: .\templates\index.html:125 .\templates\index.html:149
+#: templates/index.html:125 templates/index.html:149
 msgid "Welcome"
 msgstr "Добро пожаловать"
 
-#: .\templates\index.html:125 .\templates\index.html:149
+#: templates/index.html:125 templates/index.html:149
 msgid "to Agro Organic Food"
 msgstr "About Agro Organic"
 
-#: .\templates\index.html:127 .\templates\index.html:135
-#: .\templates\index.html:143 .\templates\index.html:151
+#: templates/index.html:127 templates/index.html:135 templates/index.html:143
+#: templates/index.html:151
 msgid "Learn More"
 msgstr "Читать еще"
 
-#: .\templates\index.html:132
+#: templates/index.html:132
 msgid "What We Do"
 msgstr "Что мы делаем"
 
-#: .\templates\index.html:133
+#: templates/index.html:133
 msgid "Great"
 msgstr "Большой"
 
-#: .\templates\index.html:133 .\templates\index.html:141
+#: templates/index.html:133 templates/index.html:141
 msgid "Agro Organic Food"
 msgstr "About Agro Organic"
 
-#: .\templates\index.html:140
+#: templates/index.html:140
 msgid "Here We Are"
 msgstr "Мы здесь"
 
-#: .\templates\index.html:141
+#: templates/index.html:141
 msgid "We Are"
 msgstr "Мы"
 
-#: .\templates\index.html:148
+#: templates/index.html:148
 msgid "Our Contacts"
 msgstr "контакт"
 
-#: .\templates\index.html:178
+#: templates/index.html:178
 msgid "Удобная локация"
 msgstr "Удобная локация"
 
-#: .\templates\index.html:189
+#: templates/index.html:189
 msgid "Быстрая доставка"
 msgstr "Быстрая доставка"
 
-#: .\templates\index.html:198
+#: templates/index.html:198
 msgid "Колл центр"
 msgstr "Колл центр"
 
-#: .\templates\index.html:207
+#: templates/index.html:207
 msgid "Политика возврата"
 msgstr "Политика возврата"
 
-#: .\templates\index.html:218
+#: templates/index.html:218
 msgid "Category"
 msgstr "катрегория"
 
-#: .\templates\index.html:231 .\templates\index.html:236
+#: templates/index.html:231 templates/index.html:236
 msgid "Fruits"
 msgstr "Фрукты"
 
-#: .\templates\index.html:253 .\templates\index.html:258
+#: templates/index.html:253 templates/index.html:258
 msgid "Vegetables"
 msgstr "Овощи"
 
-#: .\templates\index.html:274 .\templates\index.html:279
+#: templates/index.html:274 templates/index.html:279
 msgid "Parsley"
 msgstr "Зелени"
 
-#: .\templates\index.html:295 .\templates\index.html:300
+#: templates/index.html:295 templates/index.html:300
 msgid "Dried fruits"
 msgstr "Сухофрукты"
 
-#: .\templates\index.html:321
+#: templates/index.html:321
 msgid "Latest Products"
 msgstr "Продукты"
 
-#: .\templates\index.html:381
+#: templates/index.html:384
 msgid "Hours"
 msgstr "Часы"
 
-#: .\templates\index.html:407
+#: templates/index.html:410
 msgid "Minutes"
 msgstr "Минуты"
 
-#: .\templates\index.html:433
+#: templates/index.html:436
 msgid "Seconds"
 msgstr "Секунды"
 
-#: .\templates\layouts\footer.html:296
+#: templates/layouts/footer.html:296
 msgid "About Agro Organic cop."
 msgstr "About Agro Organic ком."
 
-#: .\templates\layouts\footer.html:302
+#: templates/layouts/footer.html:302
 msgid "Location Store"
 msgstr "Местоположение Магазин"
 
-#: .\templates\layouts\footer.html:313
+#: templates/layouts/footer.html:313
 msgid "Subscribe To Our Newsletter"
 msgstr "Подпишитесть на нас"
 
-#: .\templates\layouts\footer.html:318
+#: templates/layouts/footer.html:318
 msgid "Enter your order name"
 msgstr "Подписывайтесь на наc"
 
-#: .\templates\layouts\footer.html:320
+#: templates/layouts/footer.html:320
 msgid "SUBMIT"
 msgstr "Подвердить"
 
-#: .\templates\layouts\footer.html:340
+#: templates/layouts/footer.html:340
 msgid "Connect with us"
 msgstr "Мы в соц.сетях"
 
-#: .\templates\layouts\footer.html:355 .\templates\layouts\header.html:69
-#: .\templates\layouts\header2.html:613
+#: templates/layouts/footer.html:355 templates/layouts/header.html:69
+#: templates/layouts/header2.html:615
 msgid "About Us"
 msgstr "О НАС"
 
-#: .\templates\layouts\header.html:66 .\templates\shop.html:14
-#: .\templates\shop.html:17 .\templates\single-product.html:14
+#: templates/layouts/header.html:66 templates/shop.html:14
+#: templates/shop.html:17 templates/single-product.html:14
 msgid "Shop"
 msgstr "Продукты"
 
-#: .\templates\layouts\header.html:79 .\templates\layouts\header.html:90
-#: .\templates\layouts\header2.html:580
+#: templates/layouts/header.html:79 templates/layouts/header.html:90
+#: templates/layouts/header2.html:582
 msgid "Log out"
 msgstr "Выйти"
 
-#: .\templates\layouts\header.html:81 .\templates\layouts\header.html:93
-#: .\templates\layouts\header2.html:582
+#: templates/layouts/header.html:81 templates/layouts/header.html:93
+#: templates/layouts/header2.html:584
 msgid "Sign in"
 msgstr "Войти"
 
-#: .\templates\layouts\header2.html:597
+#: templates/layouts/header2.html:599
 msgid "HOME"
 msgstr "ГЛАВНАЯ"
 
-#: .\templates\layouts\header2.html:605
+#: templates/layouts/header2.html:607
 msgid "PRODUCTS"
 msgstr "ПРОДУКТЫ"
 
-#: .\templates\layouts\header2.html:621
+#: templates/layouts/header2.html:623
 msgid "CONTACT"
 msgstr "КОНТАКТЫ"
 
-#: .\templates\products_filter.html:12
+#: templates/products_filter.html:12
 msgid "Clear filter"
 msgstr "Очистить фильтр"
 
-#: .\templates\products_filter.html:22
+#: templates/products_filter.html:22
 msgid "Categories"
 msgstr "Категории"
 
-#: .\templates\registration\activate.html:4
+#: templates/registration/activate.html:4
 msgid "Activation Failure"
 msgstr ""
 
-#: .\templates\registration\activate.html:7
+#: templates/registration/activate.html:7
 msgid "Account activation failed."
 msgstr ""
 
-#: .\templates\registration\activation_complete.html:4
-#: .\templates\registration\activation_complete_admin_pending.html:4
+#: templates/registration/activation_complete.html:4
+#: templates/registration/activation_complete_admin_pending.html:4
 msgid "Account Activated"
 msgstr ""
 
-#: .\templates\registration\activation_complete.html:8
-#: .\templates\registration\activation_complete_admin_pending.html:8
+#: templates/registration/activation_complete.html:8
+#: templates/registration/activation_complete_admin_pending.html:8
 msgid "Your account is now activated."
 msgstr ""
 
-#: .\templates\registration\activation_complete.html:10
+#: templates/registration/activation_complete.html:10
 msgid "You can log in."
 msgstr ""
 
-#: .\templates\registration\activation_complete_admin_pending.html:10
+#: templates/registration/activation_complete_admin_pending.html:10
 msgid "Once a site administrator activates your account you can login."
 msgstr ""
 
-#: .\templates\registration\activation_email.html:6
-#: .\templates\registration\admin_approve_email.html:6
+#: templates/registration/activation_email.html:6
+#: templates/registration/admin_approve_email.html:6
 msgid "registration"
 msgstr ""
 
-#: .\templates\registration\activation_email.html:11
+#: templates/registration/activation_email.html:11
 #, python-format
 msgid ""
 "\n"
@@ -436,7 +436,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: .\templates\registration\activation_email.html:17
+#: templates/registration/activation_email.html:17
 #, python-format
 msgid ""
 "\n"
@@ -446,7 +446,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: .\templates\registration\activation_email.html:29
+#: templates/registration/activation_email.html:29
 #, python-format
 msgid ""
 "\n"
@@ -455,7 +455,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: .\templates\registration\activation_email.txt:2
+#: templates/registration/activation_email.txt:2
 #, python-format
 msgid ""
 "\n"
@@ -464,7 +464,7 @@ msgid ""
 "адрес будет удален из наших записей.\n"
 msgstr ""
 
-#: .\templates\registration\activation_email.txt:6
+#: templates/registration/activation_email.txt:6
 #, python-format
 msgid ""
 "\n"
@@ -473,7 +473,7 @@ msgid ""
 "%(expiration_days)s days:\n"
 msgstr ""
 
-#: .\templates\registration\activation_email.txt:13
+#: templates/registration/activation_email.txt:13
 #, python-format
 msgid ""
 "\n"
@@ -481,49 +481,49 @@ msgid ""
 "%(site_name)s\n"
 msgstr ""
 
-#: .\templates\registration\activation_email_subject.txt:1
-#: .\templates\registration\admin_approve_complete_email_subject.txt:1
+#: templates/registration/activation_email_subject.txt:1
+#: templates/registration/admin_approve_complete_email_subject.txt:1
 msgid "Account activation on"
 msgstr ""
 
-#: .\templates\registration\admin_approve.html:4
+#: templates/registration/admin_approve.html:4
 msgid "Approval Failure"
 msgstr ""
 
-#: .\templates\registration\admin_approve.html:7
+#: templates/registration/admin_approve.html:7
 msgid "Account Approval failed."
 msgstr ""
 
-#: .\templates\registration\admin_approve_complete.html:4
+#: templates/registration/admin_approve_complete.html:4
 msgid "Account Approved"
 msgstr ""
 
-#: .\templates\registration\admin_approve_complete.html:8
+#: templates/registration/admin_approve_complete.html:8
 msgid "The user's account is now approved."
 msgstr ""
 
-#: .\templates\registration\admin_approve_complete_email.html:6
+#: templates/registration/admin_approve_complete_email.html:6
 msgid "admin approval"
 msgstr ""
 
-#: .\templates\registration\admin_approve_complete_email.html:11
+#: templates/registration/admin_approve_complete_email.html:11
 msgid ""
 "\n"
 "    Your account is now approved. You can \n"
 "    "
 msgstr ""
 
-#: .\templates\registration\admin_approve_complete_email.html:14
+#: templates/registration/admin_approve_complete_email.html:14
 msgid "log in."
 msgstr ""
 
-#: .\templates\registration\admin_approve_complete_email.txt:2
+#: templates/registration/admin_approve_complete_email.txt:2
 msgid ""
 "\n"
 "Your account is now approved. You can log in using the following link\n"
 msgstr ""
 
-#: .\templates\registration\admin_approve_email.html:11
+#: templates/registration/admin_approve_email.html:11
 #, python-format
 msgid ""
 "\n"
@@ -532,18 +532,18 @@ msgid ""
 "    "
 msgstr ""
 
-#: .\templates\registration\admin_approve_email.html:17
+#: templates/registration/admin_approve_email.html:17
 msgid ""
 "\n"
 "    To approve this, please\n"
 "    "
 msgstr ""
 
-#: .\templates\registration\admin_approve_email.html:20
+#: templates/registration/admin_approve_email.html:20
 msgid "click here"
 msgstr ""
 
-#: .\templates\registration\admin_approve_email.html:23
+#: templates/registration/admin_approve_email.html:23
 #, python-format
 msgid ""
 "\n"
@@ -552,7 +552,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: .\templates\registration\admin_approve_email.txt:2
+#: templates/registration/admin_approve_email.txt:2
 #, python-format
 msgid ""
 "\n"
@@ -560,86 +560,85 @@ msgid ""
 "%(site_name)s.\n"
 msgstr ""
 
-#: .\templates\registration\admin_approve_email.txt:6
+#: templates/registration/admin_approve_email.txt:6
 msgid ""
 "\n"
 "To approve this, please click the following link.\n"
 msgstr ""
 
-#: .\templates\registration\admin_approve_email_subject.txt:1
+#: templates/registration/admin_approve_email_subject.txt:1
 msgid "Account approval on"
 msgstr ""
 
-#: .\templates\registration\login.html:10
-#: .\templates\registration\login.html:13
-#: .\templates\registration\login.html:40
+#: templates/registration/login.html:10 templates/registration/login.html:13
+#: templates/registration/login.html:40
 msgid "Login"
 msgstr ""
 
-#: .\templates\registration\login.html:61
-#: .\templates\registration\registration_form.html:68
+#: templates/registration/login.html:61
+#: templates/registration/registration_form.html:68
 msgid "Keep me logged in"
 msgstr ""
 
-#: .\templates\registration\login.html:65
+#: templates/registration/login.html:65
 msgid "Log In"
 msgstr ""
 
-#: .\templates\registration\login.html:66
+#: templates/registration/login.html:66
 msgid "Forgot Password?"
 msgstr ""
 
-#: .\templates\registration\logout.html:4
+#: templates/registration/logout.html:4
 msgid "Logged out"
 msgstr ""
 
-#: .\templates\registration\logout.html:7
+#: templates/registration/logout.html:7
 msgid "Successfully logged out"
 msgstr ""
 
-#: .\templates\registration\password_change_done.html:4
+#: templates/registration/password_change_done.html:4
 msgid "Password changed"
 msgstr ""
 
-#: .\templates\registration\password_change_done.html:7
+#: templates/registration/password_change_done.html:7
 msgid "Password successfully changed!"
 msgstr ""
 
-#: .\templates\registration\password_change_form.html:4
-#: .\templates\registration\password_change_form.html:10
+#: templates/registration/password_change_form.html:4
+#: templates/registration/password_change_form.html:10
 msgid "Change password"
 msgstr ""
 
-#: .\templates\registration\password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:4
 msgid "Password reset complete"
 msgstr ""
 
-#: .\templates\registration\password_reset_complete.html:8
+#: templates/registration/password_reset_complete.html:8
 msgid "Your password has been reset!"
 msgstr ""
 
-#: .\templates\registration\password_reset_complete.html:9
+#: templates/registration/password_reset_complete.html:9
 #, python-format
 msgid "You may now <a href=\"%(login_url)s\">log in</a>"
 msgstr ""
 
-#: .\templates\registration\password_reset_confirm.html:10
+#: templates/registration/password_reset_confirm.html:10
 msgid "Confirm password reset"
 msgstr ""
 
-#: .\templates\registration\password_reset_confirm.html:14
+#: templates/registration/password_reset_confirm.html:14
 msgid "Enter your new password below to reset your password:"
 msgstr ""
 
-#: .\templates\registration\password_reset_confirm.html:18
+#: templates/registration/password_reset_confirm.html:18
 msgid "Set password"
 msgstr ""
 
-#: .\templates\registration\password_reset_done.html:4
+#: templates/registration/password_reset_done.html:4
 msgid "Password reset"
 msgstr ""
 
-#: .\templates\registration\password_reset_done.html:8
+#: templates/registration/password_reset_done.html:8
 msgid ""
 "\n"
 "    We have sent you an email with a link to reset your password. Please "
@@ -648,11 +647,11 @@ msgid ""
 "    "
 msgstr ""
 
-#: .\templates\registration\password_reset_email.html:3
+#: templates/registration/password_reset_email.html:3
 msgid "Greetings"
 msgstr ""
 
-#: .\templates\registration\password_reset_email.html:5
+#: templates/registration/password_reset_email.html:5
 #, python-format
 msgid ""
 "\n"
@@ -661,7 +660,7 @@ msgid ""
 "wish to reset your password, please ignore this message.\n"
 msgstr ""
 
-#: .\templates\registration\password_reset_email.html:11
+#: templates/registration/password_reset_email.html:11
 msgid ""
 "\n"
 "To reset your password, please click the following link, or copy and paste "
@@ -669,24 +668,24 @@ msgid ""
 "into your web browser:\n"
 msgstr ""
 
-#: .\templates\registration\password_reset_email.html:20
+#: templates/registration/password_reset_email.html:20
 msgid "Your username, in case you've forgotten:"
 msgstr ""
 
-#: .\templates\registration\password_reset_email.html:23
+#: templates/registration/password_reset_email.html:23
 msgid "Best regards"
 msgstr ""
 
-#: .\templates\registration\password_reset_email.html:24
+#: templates/registration/password_reset_email.html:24
 msgid "Management"
 msgstr ""
 
-#: .\templates\registration\password_reset_form.html:4
-#: .\templates\registration\password_reset_form.html:21
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:21
 msgid "Reset password"
 msgstr ""
 
-#: .\templates\registration\password_reset_form.html:14
+#: templates/registration/password_reset_form.html:14
 msgid ""
 "\n"
 "    Forgot your password? Enter your email in the form below and we'll send "
@@ -694,50 +693,50 @@ msgid ""
 "    "
 msgstr ""
 
-#: .\templates\registration\registration_closed.html:4
+#: templates/registration/registration_closed.html:4
 msgid "Registration is closed"
 msgstr ""
 
-#: .\templates\registration\registration_closed.html:7
+#: templates/registration/registration_closed.html:7
 msgid "Sorry, but registration is closed at this moment. Come back later."
 msgstr ""
 
-#: .\templates\registration\registration_complete.html:5
+#: templates/registration/registration_complete.html:5
 msgid "Активация отправлена на вашу почту)"
 msgstr ""
 
-#: .\templates\registration\registration_complete.html:30
-#: .\templates\registration\registration_form.html:42
+#: templates/registration/registration_complete.html:30
+#: templates/registration/registration_form.html:42
 msgid "Register"
 msgstr ""
 
-#: .\templates\registration\registration_complete.html:33
+#: templates/registration/registration_complete.html:33
 msgid "Ссылка на подтверждения отправлено на ваш email"
 msgstr ""
 
-#: .\templates\registration\registration_complete.html:35
-#: .\templates\registration\registration_form.html:72
+#: templates/registration/registration_complete.html:35
+#: templates/registration/registration_form.html:72
 msgid "Sign In"
 msgstr ""
 
-#: .\templates\registration\registration_complete.html:36
+#: templates/registration/registration_complete.html:36
 msgid "Back to web site"
 msgstr ""
 
-#: .\templates\registration\registration_form.html:13
-#: .\templates\registration\registration_form.html:16
+#: templates/registration/registration_form.html:13
+#: templates/registration/registration_form.html:16
 msgid "Registration Page"
 msgstr ""
 
-#: .\templates\registration\registration_form.html:27
+#: templates/registration/registration_form.html:27
 msgid "Registration"
 msgstr ""
 
-#: .\templates\registration\resend_activation_complete.html:4
+#: templates/registration/resend_activation_complete.html:4
 msgid "Account Activation Resent"
 msgstr ""
 
-#: .\templates\registration\resend_activation_complete.html:8
+#: templates/registration/resend_activation_complete.html:8
 #, python-format
 msgid ""
 "\n"
@@ -745,59 +744,59 @@ msgid ""
 "  "
 msgstr ""
 
-#: .\templates\registration\resend_activation_form.html:4
+#: templates/registration/resend_activation_form.html:4
 msgid "Resend Activation Email"
 msgstr ""
 
-#: .\templates\registration\resend_activation_form.html:10
+#: templates/registration/resend_activation_form.html:10
 msgid "Submit"
 msgstr "Подтвердить"
 
-#: .\templates\shop.html:34
+#: templates/shop.html:38
 msgid "Showing"
 msgstr "Показано"
 
-#: .\templates\shop.html:34
+#: templates/shop.html:38
 msgid "of"
 msgstr "из"
 
-#: .\templates\shop.html:40
+#: templates/shop.html:44
 msgid "Default"
 msgstr "По умолчании"
 
-#: .\templates\shop.html:41
+#: templates/shop.html:45
 msgid "Low"
 msgstr "Низкий"
 
-#: .\templates\shop.html:42
+#: templates/shop.html:46
 msgid "High"
 msgstr "Высокий"
 
-#: .\templates\shopping-cart.html:11 .\templates\shopping-cart.html:14
+#: templates/shopping-cart.html:11 templates/shopping-cart.html:14
 msgid "Shopping-cart"
 msgstr "Корзина покупателя"
 
-#: .\templates\single-product.html:11
+#: templates/single-product.html:11
 msgid "Product Details Page"
 msgstr "Информация о продукте"
 
-#: .\templates\single-product.html:44
+#: templates/single-product.html:44
 msgid "Category:"
 msgstr "катрегория"
 
-#: .\templates\single-product.html:46
+#: templates/single-product.html:46
 msgid "Sku:"
 msgstr "ID"
 
-#: .\templates\single-product.html:148
+#: templates/single-product.html:148
 msgid "Submit Now"
 msgstr "Отправить сейчас"
 
-#: .\templates\single-product.html:218
+#: templates/single-product.html:218
 msgid "Deals of the Week"
 msgstr "Рекомендовааные товары"
 
-#: .\templates\wishlist.html:10 .\templates\wishlist.html:13
+#: templates/wishlist.html:10 templates/wishlist.html:13
 msgid "Wishlist"
 msgstr "Избранные"
 

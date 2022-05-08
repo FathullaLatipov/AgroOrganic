@@ -63,13 +63,13 @@
 								<span style="color:#fff">add-cart</span>
 							{% endif %}
 							</a>
-							<a class="icon_btn" href="{% url 'contact:add-wishlist' pk=object.pk %}?next={{ request.path }}?{{request.GET.urlendcode }}">
-								{% if request.user in object.wishlist.all %}
-									<i class="lnr"><img src="{% static '/img/features/like.png' %}" style="width:20px" alt=""></i>
-								{% else %}
-									<i class="lnr"><img src="{% static '/img/features/love.png' %}" style="width:20px" alt=""></i>
-								{% endif %}
-							</a>
+{#							<a class="icon_btn" href="{% url 'contact:add-wishlist' pk=object.pk %}?next={{ request.path }}?{{request.GET.urlendcode }}">#}
+{#								{% if request.user in object.wishlist.all %}#}
+{#									<i class="lnr"><img src="{% static '/img/features/like.png' %}" style="width:20px" alt=""></i>#}
+{#								{% else %}#}
+{#									<i class="lnr"><img src="{% static '/img/features/love.png' %}" style="width:20px" alt=""></i>#}
+{#								{% endif %}#}
+{#							</a>#}
 						</div>
 					</div>
 				</div>

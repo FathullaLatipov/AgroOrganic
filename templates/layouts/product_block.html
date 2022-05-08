@@ -149,14 +149,16 @@
 <div class="flip-card" id="flip-product" style="border-radius:10px">
   <div class="flip-card-inner" style="width:250px;height:250px;border-radius:10px">
         <div class="flip-card-front" style="border-radius:30px">
-            <img src="{{ product.image.url }}"  style="width:200px;border-radius:20px;padding-top:40px;background:#fff">
+            <img src="{{ product.image.url }}" class="img-fluid" style="margin: auto;width: 100%;border-radius: 10px">
+            <h3>{{ product.title }}</h3>
+            <h3>{{ product.price }}</h3>
         </div>
         <div class="flip-card-back" style="border-radius:20px">
-            <h2 style="margin-top:10px">{{ product.title }}</h2>
-            <div class="texttt">
+            <div class="container">
                 <p class="base_text"
-                   style="color:#000;max-width:230px;width:100%;margin:0 auto;margin-top:10%  ">
-                    {{ product.product_long_description|safe }}</p>
+                   style="color:#000;margin:0 auto;margin-top:10%  ">
+                    {{ product.product_long_description|safe|slice:":100" }}...
+                </p>
             </div>
             <div class="container">
                 <div class="prd-bottom" style="padding:0px 25px;margin-top:10%">
@@ -164,32 +166,31 @@
                        class="social-info">
                         {% if product|in_cart:request %}
                         <span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>
-                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px font-weight:600">
+                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px;font-weight:600">
                         </p>
                         {% else %}
                         <span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>
-                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px font-weight:600">
+                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px;font-weight:600">
                         </p>
                         {% endif %}
                     </a>
 
                     <a onclick="add_to_wishlist(this, {{ product.pk }})" class="social-info">
                                             <span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%">
-
                                                 {% if product|in_wishlist:request %}
-                                                    <img src="{% static 'img/features/like.png' %}" style="width:20px;margin-top:-4px" alt="">
+                                                    <img src="{% static 'img/features/like.png' %}" style="width:20px;" alt="">
                                                 {% else %}
-                                                    <img src="{% static 'img/features/love.png' %}" style="width:20px;margin-top:-4px" alt="">
+                                                    <img src="{% static 'img/features/love.png' %}" style="width:20px;" alt="">
                                                 {% endif %}
                                             </span>
-                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px font-weight:600">
+                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px;font-weight:600">
                         </p>
                     </a>
 
                     <a href="{% url 'products:detail' pk=product.pk %}" class="social-info">
                             <span class="lnr lnr-move"
                                   style="background-color:#EB5757;padding:10px;border-radius:50%;color:#fff"></span>
-                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px font-weight:600">
+                        <p class="hover-text" style="padding:7px;color:#222; font-size:22px;font-weight:600">
 
                         </p>
                     </a>
@@ -218,7 +219,7 @@
                             Added to wishlist
                         </div>
                     </div>`);
-                    element.innerHTML = '<span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%"> <img src="{% static 'img/features/like.png' %}" style="width:20px;margin-top:-4px" alt=""> </span>'
+                    element.innerHTML = '<span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%"> <img src="{% static 'img/features/like.png' %}" style="width:20px;" alt=""> </span>'
                 } else {
                     $('#message').append(`<div style="padding:5px">
                         <div id="inner-message" class="alert alert-success">
@@ -226,7 +227,7 @@
                             Removed from wishlist
                         </div>
                     </div>`);
-                    element.innerHTML = '<span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%"> <img src="{% static 'img/features/love.png' %}" style="width:20px;margin-top:-4px" alt=""> </span>'
+                    element.innerHTML = '<span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%"> <img src="{% static 'img/features/love.png' %}" style="width:20px;" alt=""> </span>'
                 }
                   $('#wishlist_length').html(data.wishlist_len);
             }

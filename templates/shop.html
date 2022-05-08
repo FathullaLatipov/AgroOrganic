@@ -170,7 +170,7 @@ $(function() {
                             Added
                         </div>
                     </div>`);
-                    element.innerHTML = '<span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>'
+                    element.innerHTML = '<span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%;position: absolute;bottom: 0px;left: 16%;"></span>'
                 } else {
                    $('#message').append(`<div style="padding:5px">
                         <div id="inner-message" class="alert alert-success">
@@ -178,7 +178,7 @@ $(function() {
                             Removed
                         </div>
                     </div>`);
-                    element.innerHTML = '<span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>'
+                    element.innerHTML = '<span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%;position: absolute;bottom: 0px;left: 16%;"></span>'
                 }
                 $('#cart_length').html(data.cart_len);
           }

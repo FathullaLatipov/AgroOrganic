@@ -18,14 +18,7 @@
     transition: transform 0.5s ease-out;
 }
 
-.social:hover {
-    border-radius: 10%;
-    transform: rotate(300deg);
-}
 
-.social:hover svg {
-    transform: rotate(315deg);
-}
 
 .facebook {
     fill: #3b5998;
@@ -161,22 +154,22 @@
                 </p>
             </div>
             <div class="container">
-                <div class="prd-bottom" style="padding:0px 25px;margin-top:10%">
-                    <a style="color:#fff;font-weight:500;border-radius:50px"  onclick="add_to_cart(this, {{ product.pk }})"
+                <div class="prd-bottom" style="padding:0 25px;margin-top:10%">
+                    <a style="color:#fff;font-weight:500;border-radius:50px;position: absolute;bottom: 20%;left: 16%;"  onclick="add_to_cart(this, {{ product.pk }})"
                        class="social-info">
                         {% if product|in_cart:request %}
-                        <span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>
+                        <span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%;position: absolute;bottom: 20%;left: 16%;"></span>
                         <p class="hover-text" style="padding:7px;color:#222; font-size:22px;font-weight:600">
                         </p>
                         {% else %}
-                        <span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%"></span>
+                        <span class="ti-bag" style="background-color:#EB5757;padding:10px;border-radius:50%;position: absolute;bottom: 20%;left: 16%;"></span>
                         <p class="hover-text" style="padding:7px;color:#222; font-size:22px;font-weight:600">
                         </p>
                         {% endif %}
                     </a>
 
                     <a onclick="add_to_wishlist(this, {{ product.pk }})" class="social-info">
-                                            <span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%">
+                                            <span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%;position: absolute;left: 42%;bottom: 21%">
                                                 {% if product|in_wishlist:request %}
                                                     <img src="{% static 'img/features/like.png' %}" style="width:20px;" alt="">
                                                 {% else %}
@@ -219,7 +212,7 @@
                             Added to wishlist
                         </div>
                     </div>`);
-                    element.innerHTML = '<span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%"> <img src="{% static 'img/features/like.png' %}" style="width:20px;" alt=""> </span>'
+                    element.innerHTML = '<span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%;position: absolute;left: 42%;bottom:21%"> <img src="{% static 'img/features/like.png' %}" style="width:20px;" alt=""> </span>'
                 } else {
                     $('#message').append(`<div style="padding:5px">
                         <div id="inner-message" class="alert alert-success">
@@ -227,7 +220,7 @@
                             Removed from wishlist
                         </div>
                     </div>`);
-                    element.innerHTML = '<span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%"> <img src="{% static 'img/features/love.png' %}" style="width:20px;" alt=""> </span>'
+                    element.innerHTML = '<span class="lnr" style="background-color:#EB5757;padding:10px;border-radius:50%;position: absolute;left: 42%;bottom:21%"> <img src="{% static 'img/features/love.png' %}" style="width:20px;" alt=""> </span>'
                 }
                   $('#wishlist_length').html(data.wishlist_len);
             }

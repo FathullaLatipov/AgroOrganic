@@ -112,59 +112,61 @@
 
 </style>
 <!-- start banner Area -->
- <section id="section-1">
+<section id="section-1">
     <div class="content-slider">
-      <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
-      <input type="radio" id="banner2" class="sec-1-input" name="banner">
-      <input type="radio" id="banner3" class="sec-1-input" name="banner">
-      <input type="radio" id="banner4" class="sec-1-input" name="banner">
-      <div class="slider" style="">
-        <div id="top-banner-1" class="banner">
-          <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);margin-top: 5%">
-            <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Creative Template' %}</h2>
-            <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Welcome' %}<br>{% trans 'to Agro Organic Food' %}</h1>
-            <div class="line"></div>
-            <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
-          </div>
+        <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+        <input type="radio" id="banner2" class="sec-1-input" name="banner">
+        <input type="radio" id="banner3" class="sec-1-input" name="banner">
+        <input type="radio" id="banner4" class="sec-1-input" name="banner">
+        <div class="slider" style="">
+            <div id="top-banner-1" class="banner">
+                <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);">
+                    <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Export' %}</h2>
+                    <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'And' %}<br>{% trans 'Import of dried fruits' %}</h1>
+                    <div class="line"></div>
+                    <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
+                </div>
+            </div>
+            <div id="top-banner-2" class="banner">
+                <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);">
+                    <h2 style="color:#fff;;font-family:'Spartan', sans-serif">{% trans 'Export' %}</h2>
+                    <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'And' %}<br>{% trans 'Import fruits' %}</h1>
+                    <div class="line"></div>
+                    <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
+                </div>
+            </div>
+            <div id="top-banner-3" class="banner">
+                <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);">
+                    <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Export' %}</h2>
+                    <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'And' %}<br>{% trans 'Import of vegetables' %}</h1>
+                    <div class="line"></div>
+                    <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
+                </div>
+            </div>
+            <div id="top-banner-4" class="banner" style="background-color: rgba(0, 0, 0, 0.5);">
+                <div class="banner-inner-wrapper">
+                    <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Export' %}</h2>
+                    <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'And' %}<br>{% trans 'Import parsley' %}</h1>
+                    <div class="line"></div>
+                    <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
+                </div>
+            </div>
         </div>
-        <div id="top-banner-2" class="banner" >
-          <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);margin-top: 5%">
-            <h2 style="color:#fff;;font-family:'Spartan', sans-serif">{% trans 'What We Do' %}</h2>
-            <h1 style="color:#fff;;font-family:'Spartan', sans-serif">{% trans 'Great' %}<br>{% trans 'Agro Organic Food' %}</h1>
-            <div class="line"></div>
-            <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
-          </div>
-        </div>
-        <div id="top-banner-3" class="banner">
-          <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);margin-top: 5%">
-            <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Here We Are' %}</h2>
-            <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'We Are' %}<br>{% trans 'Agro Organic Food' %}</h1>
-            <div class="line"></div>
-            <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
-          </div>
-        </div>
-        <div id="top-banner-4" class="banner" style="background-color: rgba(0, 0, 0, 0.5);margin-top: 5%">
-          <div class="banner-inner-wrapper" >
-            <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Our Contacts' %}</h2>
-            <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Welcome' %}<br>{% trans 'to Agro Organic Food' %}</h1>
-            <div class="line"></div>
-            <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
-          </div>
-        </div>
-      </div>
-      <nav>
-        <div class="controls">
-          <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span>01</span> Intro</label>
-          <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span>02</span> Work</label>
-          <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span>03</span> About</label>
-          <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span>04</span> Contacts</label>
-        </div>
-      </nav>
+        <nav>
+            <div class="controls">
+                <label for="banner1"><span class="progressbar"><span
+                        class="progressbar-fill"></span></span><span>01</span> {% trans 'Dried fruits' %}</label>
+                <label for="banner2"><span class="progressbar"><span
+                        class="progressbar-fill"></span></span><span>02</span> {% trans 'Fruits' %}</label>
+                <label for="banner3"><span class="progressbar"><span
+                        class="progressbar-fill"></span></span><span>03</span> {% trans 'Vegetables' %}</label>
+                <label for="banner4"><span class="progressbar"><span
+                        class="progressbar-fill"></span></span><span>04</span> {% trans 'Parsley' %}</label>
+            </div>
+        </nav>
     </div>
-  </section>
-<!-- End banner Area -->
+</section>
 
-<!-- start features Area -->
 
 <section class="features-area section_gap p-5 ">
     <div class="container">
@@ -172,10 +174,11 @@
             <!-- single features -->
             <div class="col-lg-3 col-md-6 col-sm-6 col-3">
                 <div class="single-features">
-                            <div class="css-square">
-                                <img src="{% static '/img/icons/location.png' %}" style="max-width:50px;width:100%" alt="">
-                            </div>
-                    <p class="info1" >{% trans 'Удобная локация' %}</p>
+                    <div class="css-square">
+                        <a href="neo1/" id="#2"> <img src="{% static '/img/icons/location.png' %}"
+                                                        style="max-width:50px;width:100%" alt=""></a>
+                    </div>
+                    <p class="info1">{% trans 'Удобная локация' %}</p>
 
                 </div>
 
@@ -183,27 +186,30 @@
             <!-- single features -->
             <div class="col-lg-3 col-md-6 col-sm-6 col-3">
                 <div class="single-features">
-                            <div class="css-square">
-                                <img src="{% static '/img/icons/car.png' %}" style="max-width:60px;width:100%" alt="">
-                            </div>
+                    <div class="css-square">
+                        <a href="neo3/"> <img src="{% static '/img/icons/car.png' %}"
+                                                        style="max-width:60px;width:100%" alt=""></a>
+                    </div>
                     <p class="info2">{% trans 'Быстрая доставка' %}</p>
                 </div>
             </div>
             <!-- single features -->
             <div class="col-lg-3 col-md-6 col-sm-6 col-3">
                 <div class="single-features">
-                            <div class="css-square">
-                                <img src="{% static '/img/icons/call-center.png' %}" style="max-width:50px;width:100%" alt="">
-                            </div>
+                    <div class="css-square">
+                        <a href="neo2/"><img src="{% static '/img/icons/call-center.png' %}"
+                                                       style="max-width:50px;width:100%" alt=""></a>
+                    </div>
                     <p class="info1">{% trans 'Колл центр' %}</p>
                 </div>
             </div>
             <!-- single features -->
             <div class="col-lg-3 col-md-6 col-sm-6 col-3">
                 <div class="single-features">
-                            <div class="css-square">
-                                <img src="{% static '/img/icons/dollar.png' %}" style="max-width:50px;width:100%" alt="">
-                            </div>
+                    <div class="css-square">
+                        <a href="neo/"> <img src="{% static '/img/icons/dollar.png' %}"
+                                                        style="max-width:50px;width:100%" alt=""></a>
+                    </div>
                     <p class="info1">{% trans 'Политика возврата' %}</p>
                 </div>
             </div>
@@ -214,102 +220,81 @@
 
 <!-- Start category Area -->
 <section class="category-area">
-    <div class="container-fluid">
-        <h1 class="text-center mb-0" style="font-weight:600;font-family:'Spartan', sans-serif">{% trans 'Category' %}</h1>
+    <div class="container">
+        <h1 class="text-center" style="font-weight:bold;">{% trans 'Category' %}</h1>
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-12">
                 <div class="row">
-                    <div class="col-lg-8 col-md-8">
-                        <div data-aos="fade-right">
-                             <a href="products/?category=1">
+                    <div class="col-lg-6 col-md-6">
+                        <a href="products/?category=1#men">
                             <div class="single-deal">
                                 <div class="overlay"></div>
-                                <img class="cats img-fluid" src="{% static 'img/category/Rectangle 79.png' %}"
-                                     style="border-radius:20px;" alt="">
+                                <img class="img-fluid w-100" src="{% static 'img/category/frukti.jpg' %}" alt="">
                                 <div class="deal-details">
                                     {% for cat in cats %}
-                                    <h6 class="deal-title" style="font-family:'Spartan', sans-serif;font-weight:600">{% trans 'Fruits' %}</h6>
+                                    <h6 class="deal-title">{% trans 'Fruits' %}</h6>
                                     {% endfor %}
                                 </div>
+                                <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
+                                    {% trans 'Fruits' %}
+                                </h6>
                             </div>
-                                    {% for cat in cats %}
-                                    <h6 class="deal-title2">{% trans 'Fruits' %}</h6>
-                                    {% endfor %}
                         </a>
-                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-4">
-                        <div class="single-deal">
-                            <div data-aos="fade-left">
-                                <a href="/products/?category=2">
-                            <div class="overlay" style="height:85%;margin-top:9%"></div>
-                            <br>
-                            <img class="cats img-fluid" src="{% static 'img/category/Rectangle 80.png' %}"
-                                 style="border-radius:20px;height: 243px;" alt="">
-
+                    <div class="col-lg-6 col-md-6">
+                        <a href="products/?category=1#men">
+                            <div class="single-deal">
+                                <div class="overlay" style="border-radius:20px"></div>
+                                <img class="img-fluid w-100" style="border-radius:20px"
+                                     src="{% static 'img/category/vegetables.jpg' %}" alt="">
                                 <div class="deal-details">
                                     {% for cat in cats %}
-                                    <h6 class="deal-title" style="font-family:'Spartan', sans-serif;font-weight:600">
-                                        {% trans 'Vegetables' %}</h6>
+                                    <h6 class="deal-title">{% trans 'Vegetables' %}</h6>
                                     {% endfor %}
                                 </div>
-                                 {% for cat in cats %}
-                                    <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
-                                        {% trans 'Vegetables' %}</h6>
-                                    {% endfor %}
+                                <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
+                                    <br>
+                                    {% trans 'Vegetables' %}
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-deal">
+                            <div class="overlay" style="width:350px;height:234px"></div>
+                            <img class="img-fluid w-100" style="border-radius:20px"
+                                 src="{% static 'img/category/zeleny.jpg' %} " alt="">
+                            <a href="{% static 'img/category/c3.jpg' %} " class="img-pop-up" target="_blank">
+                                <div class="deal-details">
+                                    <h6 class="deal-title">{% trans 'Parsley' %}</h6>
+                                </div>
+                                <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
+                                    {% trans 'Parsley' %}
+                                </h6>
                             </a>
                         </div>
-                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-6 col-md-6">
                         <div class="single-deal">
-                            <div data-aos="fade-right">
-                                 <a href="/products/?category=4">
-                            <div class="overlay" style="height:85%;margin-top:9%"></div>
-                            <br>
-                            <img class="cats img-fluid" src="{% static 'img/category/Rectangle 82.png' %}"
-                                 style="border-radius:20px;height: 242px;" alt="">
-
+                            <div class="overlay"></div>
+                            <img class="img-fluid w-100" src="{% static 'img/category/suxofrukti.jpg' %} " alt="">
+                            <a href="{% static 'img/category/c3.jpg' %} " class="img-pop-up" target="_blank">
                                 <div class="deal-details">
-                                    <h6 class="deal-title" style="font-family:'Spartan', sans-serif;font-weight:600">{% trans 'Parsley' %}</h6>
+                                    <h6 class="deal-title" style="font-weight:bold">{% trans 'Dried fruits' %}</h6>
                                 </div>
-
-                                    {% for cat in cats %}
-                                    <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
-                                        {% trans 'Parsley' %}</h6>
-                                    {% endfor %}
-                                     </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8">
-                        <div data-aos="fade-left">
-                             <a href="/products/?category=3">
-                            <div class="single-deal">
-                                <div class="overlay" style="background:"></div>
-                                <img class="cats img-fluid " src="{% static 'img/category/Rectangle 81.png' %}"
-                                     style="border-radius:20px;" alt="">
-                                <div class="deal-details">
-                                    {% for cat in cats %}
-                                    <h6 class="deal-title" style="font-family:'Spartan', sans-serif;font-weight:600">
-                                        {% trans 'Dried fruits' %}</h6>
-                                    {% endfor %}
-                                </div>
-                                 {% for cat in cats %}
-                                    <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600;padding:20px">
-                                        {% trans 'Dried fruits' %}</h6>
-                                    {% endfor %}
-                            </div>
-                        </a>
+                                <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
+                                    {% trans 'Dried fruits' %}
+                                </h6>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 <!-- End category Area -->
-
 <!-- start product Area -->
 
 <!-- single product slide -->

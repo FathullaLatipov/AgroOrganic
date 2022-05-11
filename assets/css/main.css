@@ -1366,7 +1366,7 @@ h1, h2, h3, h4, h5, h6 {
 ============================================================================================ */
 .single-deal {
   position: relative;
-  margin-bottom: 30px; }
+}
   .single-deal .overlay {
     position: absolute;
     left: 0;
@@ -3504,7 +3504,7 @@ button:hover {
         padding-top: 50px !important;
     }
     .nav-ul {
-        top: 122px !important;
+        top: 130px !important;
     }
     .bar-img {
         width: 25px !important;
@@ -6298,17 +6298,16 @@ button:hover {
         padding-right: 0px;
         margin-bottom: 1rem; }
        .info1{
-            color:#000;padding:5px;font-size:13px;font-family: 'Roboto';width:100%;display:none
+            color:#000;padding:5px;font-size:17px;font-family: 'Roboto';width:100%;
             }
           .info2{
-            color:#000;padding:5px;font-size:12px;margin-top:10px;font-family: 'Roboto';width:100%;display:none
+            color:#000;padding:5px;font-size:17px;margin-top:10px;font-family: 'Roboto';width:100%;
             }
             .swiper_start{
                 display:block;
                 padding:0px;
             }
             .css-square {
-    max-width: 100px;
     width:100%;
     background-color: none;
     -webkit-transition: -webkit-transform .8s ease-in-out;
@@ -7309,7 +7308,7 @@ display:flex;align-items:center;justify-content: space-between;
     font-size: 1.5em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper .line {
-    margin: 1.7em auto;
+    margin: 1em auto;
   }
   .clock1{
     display: flex;

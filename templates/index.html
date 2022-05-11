@@ -89,6 +89,49 @@
         object-fit: cover;
       }
 
+      .carousel-text {
+          color: #fff;
+          font-size: 44px;
+          margin-top: 80px;
+          padding: 12px;
+      }
+
+      .carousel-desc {
+          color: #fff;
+          font-size: 44px;
+      }
+
+
+@media (max-width: 780px) {
+    #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a {
+    padding: 0.1em 1em;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.9em;
+    color: #fff;
+    text-transform: uppercase;
+    border: 0.1875em solid #fff;
+}
+
+     .carousel-text {
+          color: #fff;
+          font-size: 18px;
+          margin-top: 77px;
+          padding: 0px;
+      }
+
+      .carousel-desc {
+          color: #fff;
+          font-size: 24px;
+      }
+
+      .css-square {
+          max-width: 100%;
+      }
+   .carrot-icon {
+       display: none;
+   }
+}
 <!--.load {-->
 <!--    position: relative;-->
 <!--    text-align: right;-->
@@ -109,6 +152,91 @@
 <!--    box-shadow:3px 3px 3px 3px #888-->
 <!--}-->
 
+@keyframes mymove {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        filter: alpha(opacity=50);
+      }
+}
+
+
+.icon-logos1{
+  width: 10%;
+  transform: rotate(350deg);
+  position: absolute;
+  animation-name: mymove;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  -webkit-transition: all 0.9s ease;
+     -moz-transition: all 0.9s ease;
+       -o-transition: all 0.9s ease;
+          transition: all 0.9s ease;
+  animation-direction: alternate;
+}
+.icon-logos{
+  width: 10%;
+  transform: rotate(350deg);
+  position: absolute;
+  animation-name: mymove;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  -webkit-transition: all 0.9s ease;
+     -moz-transition: all 0.9s ease;
+       -o-transition: all 0.9s ease;
+          transition: all 0.9s ease;
+  animation-direction: alternate;
+}
+
+@keyframes mymove {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        filter: alpha(opacity=50);
+      }
+}
+
+.mobile-icons {
+    width: 15%;
+    position: absolute;
+    right: 5%;
+    animation-name: mymove;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  -webkit-transition: all 0.9s ease;
+     -moz-transition: all 0.9s ease;
+       -o-transition: all 0.9s ease;
+          transition: all 0.9s ease;
+  animation-direction: alternate;
+}
+
+@keyframes mymove {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        filter: alpha(opacity=50);
+      }
+}
+
+.carrot-icon {
+    width: 13%;
+    position: absolute;
+    right: -20%;
+    top: 40%;
+     animation-name: mymove;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  -webkit-transition: all 0.9s ease;
+     -moz-transition: all 0.9s ease;
+       -o-transition: all 0.9s ease;
+          transition: all 0.9s ease;
+  animation-direction: alternate;
+}
+
+
 
 </style>
 <!-- start banner Area -->
@@ -121,32 +249,32 @@
         <div class="slider" style="">
             <div id="top-banner-1" class="banner">
                 <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);">
-                    <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Export' %}</h2>
-                    <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'And' %}<br>{% trans 'Import of dried fruits' %}</h1>
+                    <p class="carousel-text">{% trans 'Export' %}</p>
+                    <p class="carousel-desc" ><br>{% trans 'Import of dried fruits' %}</p>
                     <div class="line"></div>
                     <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
                 </div>
             </div>
             <div id="top-banner-2" class="banner">
                 <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);">
-                    <h2 style="color:#fff;;font-family:'Spartan', sans-serif">{% trans 'Export' %}</h2>
-                    <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'And' %}<br>{% trans 'Import fruits' %}</h1>
+                    <p class="carousel-text" >{% trans 'Export' %}</p>
+                    <p class="carousel-desc" ><br>{% trans 'Import fruits' %}</p>
                     <div class="line"></div>
                     <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
                 </div>
             </div>
             <div id="top-banner-3" class="banner">
                 <div class="banner-inner-wrapper" style="background-color: rgba(0, 0, 0, 0.2);">
-                    <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Export' %}</h2>
-                    <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'And' %}<br>{% trans 'Import of vegetables' %}</h1>
+                    <p class="carousel-text" >{% trans 'Export' %}</p>
+                    <p class="carousel-desc" ><br>{% trans 'Import of vegetables' %}</p>
                     <div class="line"></div>
                     <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
                 </div>
             </div>
             <div id="top-banner-4" class="banner" style="background-color: rgba(0, 0, 0, 0.5);">
                 <div class="banner-inner-wrapper">
-                    <h2 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'Export' %}</h2>
-                    <h1 style="color:#fff;font-family:'Spartan', sans-serif">{% trans 'And' %}<br>{% trans 'Import parsley' %}</h1>
+                    <p class="carousel-text" >{% trans 'Export' %}</p>
+                    <p class="carousel-desc" ><br>{% trans 'Import parsley' %}</p>
                     <div class="line"></div>
                     <div class="learn-more-button"><a href="{% url 'contact:blog' %}">{% trans 'Learn More' %}</a></div>
                 </div>
@@ -172,11 +300,11 @@
     <div class="container">
         <div class="row features-inner" style="border-radius:30px">
             <!-- single features -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-3">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="single-features">
                     <div class="css-square">
-                        <a href="neo1/" id="#2"> <img src="{% static '/img/icons/location.png' %}"
-                                                        style="max-width:50px;width:100%" alt=""></a>
+                        <a href="neo1/" id="#2"> <img src="{% static '/img/gifs/map.gif' %}"
+                                                        style="max-width:50px;width:100%;margin:10px" alt=""></a>
                     </div>
                     <p class="info1">{% trans 'Удобная локация' %}</p>
 
@@ -184,31 +312,31 @@
 
             </div>
             <!-- single features -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-3">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="single-features">
                     <div class="css-square">
-                        <a href="neo3/"> <img src="{% static '/img/icons/car.png' %}"
-                                                        style="max-width:60px;width:100%" alt=""></a>
+                        <a href="neo3/"> <img src="{% static '/img/gifs/fast_delivery.gif' %}"
+                                                        style="max-width:50px;width:100%;margin:10px" alt=""></a>
                     </div>
                     <p class="info2">{% trans 'Быстрая доставка' %}</p>
                 </div>
             </div>
             <!-- single features -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-3">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="single-features">
                     <div class="css-square">
-                        <a href="neo2/"><img src="{% static '/img/icons/call-center.png' %}"
-                                                       style="max-width:50px;width:100%" alt=""></a>
+                        <a href="neo2/"><img src="{% static '/img/gifs/box.gif' %}"
+                                                       style="max-width:50px;width:100%;margin:10px" alt=""></a>
                     </div>
                     <p class="info1">{% trans 'Колл центр' %}</p>
                 </div>
             </div>
             <!-- single features -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-3">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="single-features">
                     <div class="css-square">
-                        <a href="neo/"> <img src="{% static '/img/icons/dollar.png' %}"
-                                                        style="max-width:50px;width:100%" alt=""></a>
+                        <a href="neo/"> <img src="{% static '/img/gifs/dollar.gif' %}"
+                                                        style="max-width:50px;width:100%;margin:10px" alt=""></a>
                     </div>
                     <p class="info1">{% trans 'Политика возврата' %}</p>
                 </div>
@@ -221,6 +349,7 @@
 <!-- Start category Area -->
 <section class="category-area">
     <div class="container">
+        <img src="{% static 'img/icons/raspberry.png' %}" class="icon-logos" alt="">
         <h1 class="text-center" style="font-weight:bold;">{% trans 'Category' %}</h1>
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-12">
@@ -229,20 +358,23 @@
                         <a href="products/?category=1#men">
                             <div class="single-deal">
                                 <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="{% static 'img/category/frukti.jpg' %}" alt="">
+                                <img class="img-fluid w-100" src="{% static 'img/category/frukti.jpg' %}" style="height: 260px" alt="">
                                 <div class="deal-details">
                                     {% for cat in cats %}
                                     <h6 class="deal-title">{% trans 'Fruits' %}</h6>
                                     {% endfor %}
                                 </div>
                                 <h6 class="deal-title2" style="font-family:'Spartan', sans-serif;font-weight:600">
-                                    {% trans 'Fruits' %}
+                                    <br>
+                                    {% trans 'Fruits' %}<img src="{% static 'img/icons/carrot.png' %}" class="mobile-icons" alt="">
                                 </h6>
                             </div>
                         </a>
                     </div>
+                    <img src="{% static 'img/icons/carrot.png' %}" class="carrot-icon"  alt="">
                     <div class="col-lg-6 col-md-6">
                         <a href="products/?category=1#men">
+
                             <div class="single-deal">
                                 <div class="overlay" style="border-radius:20px"></div>
                                 <img class="img-fluid w-100" style="border-radius:20px"
@@ -259,6 +391,7 @@
                             </div>
                         </a>
                     </div>
+
                     <div class="col-lg-6 col-md-6">
                         <div class="single-deal">
                             <div class="overlay" style="width:350px;height:234px"></div>
@@ -277,7 +410,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="single-deal">
                             <div class="overlay"></div>
-                            <img class="img-fluid w-100" src="{% static 'img/category/suxofrukti.jpg' %} " alt="">
+                            <img class="img-fluid w-100" src="{% static 'img/category/suxofrukti.jpg' %}" style="height: 210px" alt="">
                             <a href="{% static 'img/category/c3.jpg' %} " class="img-pop-up" target="_blank">
                                 <div class="deal-details">
                                     <h6 class="deal-title" style="font-weight:bold">{% trans 'Dried fruits' %}</h6>
@@ -300,6 +433,7 @@
 <!-- single product slide -->
 <div class="single-product-slider">
     <div class="container">
+      <img src="{% static 'img/icons/strawberry.png' %}" class="icon-logos1" alt="">
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
                 <div class="section-title">

@@ -1,1 +1,1 @@
-web: gunicorn agros.wsgi --log-file -
+web: gunicorn agros1.wsgi --log-file -

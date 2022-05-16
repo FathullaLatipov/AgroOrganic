@@ -130,8 +130,8 @@
       $(".js-range-slider").ionRangeSlider({
         type: "double",
         grid: true,
-        min: {{ min_price }},
-        max: {{ max_price }},
+        min: {{ min_price|cut:"," }},
+        max: {{ max_price|cut:"," }},
         from: {% get_price request 0 %},
         to: {% get_price request 1 %},
         prefix: "$",

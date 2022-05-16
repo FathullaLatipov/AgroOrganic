@@ -506,7 +506,6 @@ $(document).ready(function(){
       })
 
 
-
     //----- Active No ui slider --------//
 
 
